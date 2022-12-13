@@ -1,0 +1,1 @@
+web: gunicorn Adda.wsgi --log-file -
