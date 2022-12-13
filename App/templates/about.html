@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title%}About Us{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+
+        <section class="home" id="home">
+            <img src="{% static 'assets/img/about.jpg' %}" alt="" class="home__img">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <h1 class="home__data-title">Know More<br> About <br><b> Our Website</b></h1>
+                    <h2 class="support__data-subtitle">India's favourite trip planning website. Coming soon to the entire world.</h2>
+                    <h3><br>&#169; Adda Travelling. All rights reserved.</h3>
+                </div>
+                <div class="support__social">
+                    <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                        <i class="ri-whatsapp-fill"></i>
+                    </a>
+                    <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="article section" id="article">
+            <div class="article__container container grid">
+                <div class="article__data">
+                    <p class="section__title article__title">Know More About <br><b> Our Website</b></p>
+                    <p class="article__description"><b>We are a part of the AddaTravelling.com Group, A listed company since 2020 (India) with over 45,100 
+                    employees and over 400 million members, making it one of the leading online travelling website in 
+                    India. With more than 1.4 million
+                    hotels in 200 cities and regions, we have built an extensive hotel network to give our customers a
+                     fantastic choice of accommodation. Our far-reaching flight network has over 2 million individual 
+                     flight routes connecting more than
+                    5,000 hotels around the India. When you combine this with our 24/7 Hindi customer service and various
+                     other travel products, you can trust us to take care of your next trip. This website is operated by
+                      AddaTravelling.com, a India
+                    entity (registration number 201613701E). AddaTravelling.com is part of the Adda travelling Group of
+                     India. AddaTravelling.com is licensed under the Travel Agents Act of India (Cap. 334) under license
+                      number 02943.</b>
+                    </p>
+                    <div class="article__img">
+                        <div class="article__img-overla">
+                            <img src="{% static 'assets/icon/Adda Travelling.jpg' %}" alt="" class="article__img-on">
+                            <p class="article__para"><br>&#169; Adda Travelling. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+{% endblock %}
+  

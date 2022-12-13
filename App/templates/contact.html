@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title%}Contact Us{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/contact.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Contact Us<br><b>We Can<br>Help.</b></h1>
+            <h2 class="support__data-subtitle"><b>Select the topic that best describes your issue,<br>
+        then you'll fill out a form with your specific details.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="subscribe section">
+    <div class="subscribe__bg">
+
+        <div class="containerf">
+            <p class="section__title subscribe__title">Welcome To<br>Contact Us Section</p>
+            <p class="subscribe__description">India's favourite Trip planning website. Coming soon to the entire world.
+            </p>
+            <form action="/contact/" method="POST" id="my-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="massage">Massage</label>
+                    <textarea name="massage" id="massage" cols="15" rows="5"></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+    
+</section>
+
+
+{% endblock %}

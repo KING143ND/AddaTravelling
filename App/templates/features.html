@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title%}Features{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/features.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Features of<br><b>Our<br>Company</b></h1>
+            <h2 class="support__data-subtitle"><b>Adda Travelling is an open service that's give information & ideas about 
+            various destination & holiday packages alongwith proper guidence by article section where you can easily 
+            search your place & destination.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="article section" id="article">
+    <div class="article__container container grid">
+        <div class="article__data">
+            <p class="section__title article__title"><b>Features</b> of<br>Our<br>Company</p>
+            <p class="article__description"><b>Adda Travelling is an open service that's give information & ideas about 
+                various destination & holiday packages alongwith proper guidence by article section where you can easily 
+                search your place & destination.</b>
+            </p>
+            <p class="article__description"><b>We  use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers' respective websites.</b>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

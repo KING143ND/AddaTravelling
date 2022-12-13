@@ -1,0 +1,90 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title%}Discover Tour{% endblock %}
+{% block active_discover %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== HOME ====================-->
+
+<section class="home" id="home">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/discover.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/company.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/discover2.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place4.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/discover5.jpg' %}" class="home__img">
+        </div>
+    </div>
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Welcome To<br><b>Video<br>Tour</b></h1>
+            <h2 class="support__data-subtitle"><b>Adda Travelling.com is giving best Video Tour of your Holiday & Vacations according with Best Quality.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--==================== VIDEO ====================-->
+<section class="video section">
+    <p class="section__title">Video Tour</p>
+    <div class="video__container container">
+        <p class="video__description">Find out more with our video of the most beautiful and pleasant places for you and your family.
+        </p>
+
+        <div class="video__card">
+        <!--==================== VIDEO CARD LOOP ====================-->
+            {% for item in allvideo %}
+            <div class="video__container container">
+                <div class="video__content">
+                    <iframe width="600" height="340" src="{{item.url}}">
+                        </iframe>
+                    <h1 class="video__title">{{item.title}}</h1>
+                    <h3 class="video__star">{{item.rating}}</h3>
+                </div>
+                <div class="video__content2">
+                    <iframe width="300" height="170" src="{{item.url}}">
+                        </iframe>
+                    <h1 class="video__title">{{item.title}}</h1>
+                    <h3 class="video__star">{{item.rating}}</h3>
+                </div>
+                <div class="video__content3">
+                    <iframe width="240" height="134" src="{{item.url}}">
+                        </iframe>
+                    <h1 class="video__title">{{item.title}}</h1>
+                    <h3 class="video__star">{{item.rating}}</h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+{% endblock %}

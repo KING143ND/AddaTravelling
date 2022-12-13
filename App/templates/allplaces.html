@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+
+{% block title%} 
+{% for item in places %}
+{{item.place_title}}
+{% endfor %} 
+{% endblock %}
+
+{% block active_place %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+{% for item in places %}
+<section class="home" id="home">
+    <img src="{{item.image.url}}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <span class="home__data-subtitle">Discover your place</span>
+            <h1 class="home__data-title">Explore The <br> Best <b>Beautiful <br> Places</b></h1>
+            
+        </div>
+        <div class="home__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="hl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="hl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="hl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="hl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="hl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+        
+    </div>
+</section>
+{% endfor %} 
+{% for item in article %}
+<section class="place section" id="place">
+    <div class="article__container container grid">
+        <div class="article__data">
+        {% for item in places %}
+            <p class="section__title2">{{item.place_title}}<br><b>{{item.location}}</b></p><br><br>
+        {% endfor %} 
+            <div class="article__card">
+                <div class="article__img">
+                    <div class="article__img-overlay">
+                        <img src="{{item.image.url}}" alt="" class="article__img-one">
+                        <h1 class="article__title">{{item.title}}</h1>
+                        <h3 class="article__star">{{item.rating}}</h3>
+                        <p class="article__para">{{item.content}}</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %} 
+{% for item in video %}
+<section class="video section">
+    <p class="section__title">Video Tour</p>
+    <div class="video__container container">
+        <p class="video__description">Find out more with our video of the most beautiful and pleasant places for you and your family.
+        </p>
+
+        <div class="video__card">
+            <div class="video__container container">
+                <div class="video__content">
+                    <iframe width="600" height="340" src="{{item.url}}">
+                        </iframe>
+                    <h1 class="video__title">{{item.title}}</h1>
+                    <h3 class="video__star">{{item.rating}}</h3>
+                </div>
+                <div class="video__content2">
+                    <iframe width="300" height="170" src="{{item.url}}">
+                        </iframe>
+                    <h1 class="video__title">{{item.title}}</h1>
+                    <h3 class="video__star">{{item.rating}}</h3>
+                </div>
+                <div class="video__content3">
+                    <iframe width="240" height="134" src="{{item.url}}">
+                        </iframe>
+                    <h1 class="video__title">{{item.title}}</h1>
+                    <h3 class="video__star">{{item.rating}}</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endfor %}
+<section class="discover section" id="hotel">
+    {% for item in hotels %}
+        <p class="section__title">Discover the most <br> attractive hotels in {{item.hotel_title}}</p>
+    {% endfor %}
+    <p class="video__description">Top stay options curated by Adda Travelling for your travel needs</p>
+    <div class="plac__container container grid">
+        {% for item in hotels %}
+        <div class="place__card">
+            <img src="{{item.hotel_image1.url}}" alt="" class="place__img">
+            <div class="place__content">
+                <span class="place__rating">
+                <i class="ri-star-fill place__rating-icon"></i>
+                <span class="hotel__rating-number">{{item.hotel_rating1}}</span>
+                </span>
+                <div class="hotel__data">
+                    <h3 class="hotel__title">{{item.hotel_title1}}</h3>
+                    <h2 class="hotel__description">{{item.hotel_desc1}}</h2>
+                    <span class="hotel__description">{{item.hotel_price1}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ri">
+            <i class="ri-roadster-fill"></i>
+            <i class="ri-wifi-fill"></i>
+            <i class="ri-restaurant-fill"></i>
+            <i class="ri-goblet-fill"></i>
+            <i class="ri-first-aid-kit-fill"></i>
+        </div>
+        <div class="rit">
+            <p class="rip">Parking</p>
+            <p class="riw">Wifi</p>
+            <p class="rir">Restaurant</p>
+            <p class="rib">Bar</p>
+            <p class="rif">First-Aid</p>
+        </div>
+        <div style="text-align:center">
+        <p class="h__title ">Guest Ratings For This Property</p><br>
+            <p class="h__subtitle ">({{item.hotel_rating1}})&#9733 Overall Rating ({{item.reviews1}} Reviews)</p><br>
+            <p class="h__subtitle ">Comfort {{item.comfort1}}</p><br>
+            <p class="h__subtitle ">Cleanliness {{item.cleanliness1}}</p><br>
+            <p class="h__subtitle ">Value For Money {{item.value_for_money1}}</p><br>
+            <p class="h__subtitle ">Facilities {{item.facilities1}}</p><br>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+        {% for item in hotels %}
+    <div class="plac__container container grid">
+        <div class="place__card">
+            <img src="{{item.hotel_image2.url}}" alt="" class="place__img">
+            <div class="place__content">
+                <span class="place__rating">
+                <i class="ri-star-fill place__rating-icon"></i>
+                <span class="place__rating-number">{{item.hotel_rating2}}</span>
+                </span>
+                <div class="hotel__data">
+                    <h3 class="hotel__title">{{item.hotel_title2}}</h3>
+                    <h2 class="hotel__description">{{item.hotel_desc2}}</h2>
+                    <span class="hotel__description">{{item.hotel_price2}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ri">
+            <i class="ri-roadster-fill"></i>
+            <i class="ri-wifi-fill"></i>
+            <i class="ri-restaurant-fill"></i>
+            <i class="ri-goblet-fill"></i>
+            <i class="ri-first-aid-kit-fill"></i>
+        </div>
+        <div class="rit">
+            <p class="rip">Parking</p>
+            <p class="riw">Wifi</p>
+            <p class="rir">Restaurant</p>
+            <p class="rib">Bar</p>
+            <p class="rif">First-Aid</p>
+        </div>
+        <div style="text-align:center">
+        <p class="h__title ">Guest Ratings For This Property</p><br>
+            <p class="h__subtitle ">({{item.hotel_rating2}})&#9733 Overall Rating ({{item.reviews2}} Reviews)</p><br>
+            <p class="h__subtitle ">Comfort {{item.comfort2}}</p><br>
+            <p class="h__subtitle ">Cleanliness {{item.cleanliness2}}</p><br>
+            <p class="h__subtitle ">Value For Money {{item.value_for_money2}}</p><br>
+            <p class="h__subtitle ">Facilities {{item.facilities2}}</p><br>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

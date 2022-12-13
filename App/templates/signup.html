@@ -1,0 +1,87 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title%}Register Here{% endblock %}
+{% block active_register %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== HOME ====================-->
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/login.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Register Here<br><b>We Can<br>Help.</b></h1>
+            <h2 class="support__data-subtitle"><b>No Worries feel free to fill up your details,<br>
+        then you'll fill out more exciting things in our Website.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--==================== SIGNUP ====================-->
+<section class="subscribe section">
+    <div class="subscribe__bg">
+
+        <div class="containerf">
+            <p class="section__title subscribe__title">Welcome To<br>Register Section</p>
+            <p class="subscribe__description">India's favourite Trip planning website. Coming soon to the entire world.
+            </p>
+            <form action="/signup/" method="POST" id="my-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Choose a unique username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="pass1">Choose a password</label>
+                    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password">
+                </div>
+
+                <div class="form-group">
+                    <label for="pass2">Confirm Password</label>
+                    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again">
+                </div>
+              <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+    
+</section>
+
+
+{% endblock %}

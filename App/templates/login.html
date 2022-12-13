@@ -1,0 +1,68 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title%}Login Here{% endblock %}
+{% block active_login %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== HOME ====================-->
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/register.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Login Here<br><b>We Can<br>Help.</b></h1>
+            <h2 class="support__data-subtitle"><b>Fill your All Details in below,<br>
+        then you'll fill out more exciting things in our Website.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--==================== LOGIN ====================-->
+<section class="subscribe section">
+    <div class="subscribe__bg">
+
+        <div class="containerf">
+            <p class="section__title subscribe__title">Welcome To<br>Login Section</p>
+            <p class="subscribe__description">India's favourite Trip planning website. Coming soon to the entire world.
+            </p>
+            <form action="/login/" method="POST" id="my-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Enter your username "required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pass">Enter your password </label>
+                    <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter your password "required>
+                </div>
+
+              <button type="submit">Submit</button>
+                
+            </form>
+        </div>
+    </div>
+    
+</section>
+
+
+{% endblock %}

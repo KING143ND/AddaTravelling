@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block title%} 
+{% for item in hotels %}
+{{item.hotel_title}} Hotels
+{% endfor %} 
+{% endblock %}
+
+{% block active_hotel %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<section class="home" id="home">
+    <div class="slideshow-container">
+        {% for item in hotels %}
+        <div class="mySlides fade">
+            <img src="{{item.hotel_image1.url}}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{{item.hotel_image2.url}}" class="home__img">
+        </div>
+        {% endfor %}
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/company.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/discover.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home1.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/hotel.jpg' %}" class="home__img">
+        </div>
+    </div>
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Hotels & <br><b>Resorts<br>to Stay</b></h1>
+            <h2 class="support__data-subtitle"><b>Top stay options curated by Adda Travelling for your Travel needs</b><br></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="discover section" id="hotel">
+    {% for item in hotels %}
+        <p class="section__title">Discover the most <br> attractive Hotels in {{item.hotel_title}}</p>
+    {% endfor %}
+    <p class="video__description">Top stay options curated by Adda Travelling for your travel needs</p>
+    <div class="plac__container container grid">
+        {% for item in hotels %}
+        <div class="place__card">
+            <img src="{{item.hotel_image1.url}}" alt="" class="place__img">
+            <div class="place__content">
+                <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="hotel__rating-number">{{item.hotel_rating1}}</span>
+                </span>
+                <div class="hotel__data">
+                    <h3 class="hotel__title">{{item.hotel_title1}}</h3>
+                    <h2 class="hotel__description">{{item.hotel_desc1}}</h2>
+                    <span class="hotel__description">{{item.hotel_price1}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ri">
+            <i class="ri-roadster-fill"></i>
+            <i class="ri-wifi-fill"></i>
+            <i class="ri-restaurant-fill"></i>
+            <i class="ri-goblet-fill"></i>
+            <i class="ri-first-aid-kit-fill"></i>
+        </div>
+        <div class="rit">
+            <p class="rip">Parking</p>
+            <p class="riw">Wifi</p>
+            <p class="rir">Restaurant</p>
+            <p class="rib">Bar</p>
+            <p class="rif">First-Aid</p>
+        </div>
+        <div style="text-align:center">
+        <p class="h__title">Guest Ratings For This Property</p><br>
+            <p class="h__subtitle">({{item.hotel_rating1}})&#9733 Overall Rating ({{item.reviews1}} Reviews)</p><br>
+            <p class="h__subtitle">Comfort {{item.comfort1}}</p><br>
+            <p class="h__subtitle">Cleanliness {{item.cleanliness1}}</p><br>
+            <p class="h__subtitle">Value For Money {{item.value_for_money1}}</p><br>
+            <p class="h__subtitle">Facilities {{item.facilities1}}</p><br>
+        </div>
+        {% endfor %}
+    </div>
+        {% for item in hotels %}
+    <div class="plac__container container grid">
+        <div class="place__card">
+            <img src="{{item.hotel_image2.url}}" alt="" class="place__img">
+            <div class="place__content">
+                <span class="place__rating">
+                <i class="ri-star-line place__rating-icon"></i>
+                <span class="place__rating-number">{{item.hotel_rating2}}</span>
+                </span>
+                <div class="hotel__data">
+                    <h3 class="hotel__title">{{item.hotel_title2}}</h3>
+                    <h2 class="hotel__description">{{item.hotel_desc2}}</h2>
+                    <span class="hotel__description">{{item.hotel_price2}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="ri">
+            <i class="ri-roadster-fill"></i>
+            <i class="ri-wifi-fill"></i>
+            <i class="ri-restaurant-fill"></i>
+            <i class="ri-goblet-fill"></i>
+            <i class="ri-first-aid-kit-fill"></i>
+        </div>
+        <div class="rit">
+            <p class="rip">Parking</p>
+            <p class="riw">Wifi</p>
+            <p class="rir">Restaurant</p>
+            <p class="rib">Bar</p>
+            <p class="rif">First-Aid</p>
+        </div>
+        <div style="text-align:center">
+        <p class="h__title ">Guest Ratings For This Property</p><br>
+            <p class="h__subtitle ">({{item.hotel_rating2}})&#9733 Overall Rating ({{item.reviews2}} Reviews)</p><br>
+            <p class="h__subtitle ">Comfort {{item.comfort2}}</p><br>
+            <p class="h__subtitle ">Cleanliness {{item.cleanliness2}}</p><br>
+            <p class="h__subtitle ">Value For Money {{item.value_for_money2}}</p><br>
+            <p class="h__subtitle ">Facilities {{item.facilities2}}</p><br>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

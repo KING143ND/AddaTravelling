@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title%}FAQs{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/faq.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Frequently<br><b>Asked<br>Questions</b></h1>
+            <h2 class="support__data-subtitle"><b>Welcome to FAQs section... Everything you need <br>to know so you can use 
+            Adda Travelling like a pro.
+        </b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="article section" id="article">
+    <div class="article__container container grid">
+        <div class="article__data">
+            <p class="section__title article__title">What is<br>AddaTravelling?</p>
+            <p class="article__para"><b>Adda Travelling is India's best online Holiday Marketplace launched in 2020 as a platform to help travelers customize, plan and have hassle-free holidays. Adda Travelling connects travelers with verified genuine and reviewed local/expert
+                travel agents who are already trusted by other travelers like them. The focus is on offering customized packages with open & transparent pricing and controlling fulfillment, thus, providing the best customer experience for the
+                traveler. Till now, over 10 Lac happy travelers have booked their trips with us and you can read the experience of our travelers here. We have been extensively covered by media. You can check the recently published articles here.</b>
+            </p>
+        </div>
+        <div class="article__data">
+            <p class="section__title article__title">How does Adda Travelling function?</p>
+            <p class="article__para"><b>Travelers enter a request for the trip basis his/her requirements which are collected through a pre-defined form of questions. The details collected are then shared with the local/ expert travel agents, who revert with their best quotes.
+                So a traveler gets multiple quotes from multiple agents to choose from. The selected itinerary with quotes is then customised by the selected travel agent and traveler. Once itinerary is fixed, traveler makes payment through Adda
+                Travelling and is assured of the trip through our verified travel partners. Once the trip is complete, the traveler reviews the travel Agent on Adda Travelling platform, thus, providing the travel agents the opportunity to know
+                and/or improve their services.</b>
+            </p>
+        </div>
+        <div class="article__data">
+            <p class="section__title article__title">How is Adda Travelling different from other online travel portals?</p>
+            <p class="article__para"><b>Adda Travelling is a one-stop platform/marketplace for planning and booking a holiday package. We empower travelers to compare multiple quotes from multiple travel agents, and further customize the trip as per the traveler's preferences.
+                The other travel portals typically provide standard package where the option of customization is limited.</b>
+            </p>
+        </div>
+        <div class="article__data">
+            <p class="section__title article__title">How are travel agents chosen on Adda Travelling?</p>
+            <p class="article__para"><b>There are over 650 local travel agents serving 65+ destinations and helping travelers in customizing their trips. The travel agents are put through stringent quality check and only the best ones are taken on board. You can know about
+                the experiences of our past travelers and read more about their reviews here.</b>
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

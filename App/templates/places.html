@@ -1,0 +1,83 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title%}Places{% endblock %}
+{% block active_place %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== HOME ====================-->
+
+<section class="home" id="home">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place4.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place5.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place2.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/place3.jpg' %}" class="home__img">
+        </div>
+    </div>
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Welcome To<br><b>Most Attractive<br>Places</b></h1>
+            <h2 class="support__data-subtitle"><b>Most Attractive Places selected by Adda Travelling for your Tour</b><br><br></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--====================PLACES====================-->
+<section class="place section" id="place">
+    <p class="section__title">Places to Visit In India</p>
+    <p class="video__description">Top stay options curated by Adda Travelling for your travel needs</p>
+    <p class="section__title2">Here are the top places to Explore!</p><br><br>
+    <div class="plac__container container grid">
+        <!--==================== PLACES CARD LOOP ====================-->
+        {% for item in allplace %}
+        <div class="place__card">
+            <img src="{{item.image.url}}" alt="" class="place__img">
+            <div class="place__content">
+                <span class="place__rating">
+                    {{item.rating}}
+                </span>
+                <div class="hotel__data">
+                    <h3 class="place__title">{{item.place_title}}</h3>
+                    <span class="place__subtitle">{{item.location}}</span>
+                    <span class="place__price">{{item.price}}</span>
+                </div>
+            </div>
+            <a href="{{item.place_title}}"><button class="button button--flex
+                        place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button></a>
+        </div>
+        {% endfor %} 
+    </div>
+</section>
+
+{% endblock %}

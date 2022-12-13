@@ -1,0 +1,94 @@
+
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title%}Support Center{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== HOME ====================-->
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/support.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Welcome To<br><b>Support<br>Center</b></h1>
+            <h2 class="support__data-subtitle"><b>We are here for solving your queries. Get quick customer support by selecting our website handles & our Social media links.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--==================== SUPPORT ====================-->
+<section class="article section" id="article">
+    <div class="article__container container grid">
+        <div class="article__data">
+            <p class="section__title article__title">Welcome To<br><b>Support Center</b></p>
+            <p class="article__description"><b>Select the Social Handle & describes your issue,
+            then we will solve your Queries as soon as possible for your specific problems.</b>
+                <div class="c__social">
+                    <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="al-fb">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="al-ig">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="al-tw">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="al-wp">
+                        <i class="ri-whatsapp-fill"></i>
+                    </a>
+                    <a href="tel:+917999898702" target="_blank" class="al-pn">
+                        <i class="ri-phone-fill"></i>
+                    </a>
+                    <a href="mailto:addatravelling@gmail.com" target="_blank" class="al-em">
+                        <i class="ri-mail-line"></i>
+                    </a>
+                </div>
+                <!-- <div class="l__social">
+                    <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="">
+                        <p class="shf">Facebook</p>
+
+                    </a>
+                    <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="">
+                        <p class="shi">Instagram</p>
+
+                    </a>
+                    <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="">
+                        <p class="sht">Twitter</p>
+
+                    </a>
+                    <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="">
+                        <p class="shw">Whatsapp</p>
+                    </a>
+                    <a href="tel:7999898702" target="_blank" class="">
+                        <p class="shp">Phone</p>
+                    </a>
+                    <a href="mailto:addatravelling@gmail.com" target="_blank" class="">
+                        <p class="shm">Mail</p>
+                    </a>
+                </div> -->
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

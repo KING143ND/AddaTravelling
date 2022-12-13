@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% block title%}Articles{% endblock %}
+{% block active_article %}active-link{% endblock %}
+
+
+{% load static %}
+
+{% block body %}
+
+
+<section class="home" id="home">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/article.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/article2.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/article3.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home1.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/article4.jpg' %}" class="home__img">
+        </div>
+    </div>
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Articles of<br><b>Your Favorite<br>Destination</b></h1>
+            <h2 class="support__data-subtitle"><b>Our experienced writers travel the India to bring you informative and inspirational features,<br> destination roundups, travel ideas, tips and beautiful photos in order to help you plan your next holiday.</b></h2>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://whatsapp.com/" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="article section" id="article">
+    <div class="article__container container grid">
+        <div class="article__data">
+            <p class="section__title">Articles</p>
+            <p class="article__description">You can find the most visited places at our article section, you can find the proper knowledge of your destination with the help of our article section.
+            </p>
+        </div>
+        {% for item in allarticle %}
+        <div class="article__card">
+            <div class="article__img">
+                <div class="article__img-overlay">
+                    <img src="{{item.image.url}}" alt="" class="article__img-one">
+                    <h1 class="article__title">{{item.title}}</h1>
+                    <h3 class="article__star">{{item.rating}}</h3>
+                    <p class="article__para">{{item.content}}</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+
+        <div class="page-btn">
+
+            {% if allarticle.number is 1 %}
+                <a href="?page=1"><span class="active-button"> 1</span></a>
+                <a href="?page=2"><span> 2</span></a>
+                <a href="?page=3"><span> 3</span></a>
+                <a href="?page=4"><span> 4</span></a>
+                <a href="?page=5"><span> 5</span></a>
+                <a href="?page=6"><span> <i class="ri-arrow-right-line"></i></span></a>
+            
+            {% elif allarticle.number is 2 %}
+                <a href="?page=1"><span> 1</span></a>
+                <a href="?page=2"><span class="active-button"> 2</span></a>
+                <a href="?page=3"><span> 3</span></a>
+                <a href="?page=4"><span> 4</span></a>
+                <a href="?page=5"><span> 5</span></a>
+                <a href="?page=6"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 3 %}
+                <a href="?page=1"><span> 1</span></a>
+                <a href="?page=2"><span> 2</span></a>
+                <a href="?page=3"><span class="active-button"> 3</span></a>
+                <a href="?page=4"><span> 4</span></a>
+                <a href="?page=5"><span> 5</span></a>
+                <a href="?page=6"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 4 %}
+                <a href="?page=1"><span> 1</span></a>
+                <a href="?page=2"><span> 2</span></a>
+                <a href="?page=3"><span> 3</span></a>
+                <a href="?page=4"><span class="active-button"> 4</span></a>
+                <a href="?page=5"><span> 5</span></a>
+                <a href="?page=6"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 5 %}
+                <a href="?page=1"><span> 1</span></a>
+                <a href="?page=2"><span> 2</span></a>
+                <a href="?page=3"><span> 3</span></a>
+                <a href="?page=4"><span> 4</span></a>
+                <a href="?page=5"><span class="active-button"> 5</span></a>
+                <a href="?page=6"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 6 %}
+                <a href="?page=5"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=6"><span class="active-button"> 6</span></a>
+                <a href="?page=7"><span> 7</span></a>
+                <a href="?page=8"><span> 8</span></a>
+                <a href="?page=9"><span> 9</span></a>
+                <a href="?page=10"><span> 10</span></a>
+                <a href="?page=11"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 7 %}
+                <a href="?page=5"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=6"><span> 6</span></a>
+                <a href="?page=7"><span class="active-button"> 7</span></a>
+                <a href="?page=8"><span> 8</span></a>
+                <a href="?page=9"><span> 9</span></a>
+                <a href="?page=10"><span> 10</span></a>
+                <a href="?page=11"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 8 %}
+                <a href="?page=5"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=6"><span> 6</span></a>
+                <a href="?page=7"><span> 7</span></a>
+                <a href="?page=8"><span class="active-button"> 8</span></a>
+                <a href="?page=9"><span> 9</span></a>
+                <a href="?page=10"><span> 10</span></a>
+                <a href="?page=11"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 9 %}
+                <a href="?page=5"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=6"><span> 6</span></a>
+                <a href="?page=7"><span> 7</span></a>
+                <a href="?page=8"><span> 8</span></a>
+                <a href="?page=9"><span class="active-button"> 9</span></a>
+                <a href="?page=10"><span> 10</span></a>
+                <a href="?page=11"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 10 %}
+                <a href="?page=5"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=6"><span> 6</span></a>
+                <a href="?page=7"><span> 7</span></a>
+                <a href="?page=8"><span> 8</span></a>
+                <a href="?page=9"><span> 9</span></a>
+                <a href="?page=10"><span class="active-button"> 10</span></a>
+                <a href="?page=11"><span> <i class="ri-arrow-right-line"></i></span></a>
+
+            {% elif allarticle.number is 11 %}
+                <a href="?page=10"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=11"><span class="active-button"> 11</span></a>
+                <a href="?page=12"><span> 12</span></a>
+                <a href="?page=13"><span> 13</span></a>
+                <a href="?page=14"><span> 14</span></a>
+                <a href="?page=15"><span> 15</span></a>
+                <a href="?page=16"><span> 16</span></a>
+
+            {% elif allarticle.number is 12 %}
+                <a href="?page=10"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=11"><span> 11</span></a>
+                <a href="?page=12"><span class="active-button"> 12</span></a>
+                <a href="?page=13"><span> 13</span></a>
+                <a href="?page=14"><span> 14</span></a>
+                <a href="?page=15"><span> 15</span></a>
+                <a href="?page=16"><span> 16</span></a>
+
+            {% elif allarticle.number is 13 %}
+                <a href="?page=10"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=11"><span> 11</span></a>
+                <a href="?page=12"><span> 12</span></a>
+                <a href="?page=13"><span class="active-button"> 13</span></a>
+                <a href="?page=14"><span> 14</span></a>
+                <a href="?page=15"><span> 15</span></a>
+                <a href="?page=16"><span> 16</span></a>
+
+            {% elif allarticle.number is 14 %}
+                <a href="?page=10"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=11"><span> 11</span></a>
+                <a href="?page=12"><span> 12</span></a>
+                <a href="?page=13"><span> 13</span></a>
+                <a href="?page=14"><span class="active-button"> 14</span></a>
+                <a href="?page=15"><span> 15</span></a>
+                <a href="?page=16"><span> 16</span></a>
+
+            {% elif allarticle.number is 15 %}
+                <a href="?page=10"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=11"><span> 11</span></a>
+                <a href="?page=12"><span> 12</span></a>
+                <a href="?page=13"><span> 13</span></a>
+                <a href="?page=14"><span> 14</span></a>
+                <a href="?page=15"><span class="active-button"> 15</span></a>
+                <a href="?page=16"><span> 16</span></a>
+
+            {% else %}
+                <a href="?page=10"><span> <i class="ri-arrow-left-line"></i></span></a>
+                <a href="?page=11"><span> 11</span></a>
+                <a href="?page=12"><span> 12</span></a>
+                <a href="?page=13"><span> 13</span></a>
+                <a href="?page=14"><span> 14</span></a>
+                <a href="?page=15"><span> 15</span></a>
+                <a href="?page=16"><span class="active-button"> 16</span></a>
+
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

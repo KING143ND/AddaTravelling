@@ -1,0 +1,401 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+
+{% block title%} 
+Search Results
+{% endblock %}
+
+{% block active_home %}active-link{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== SEARCH RESULTS ====================-->
+{% if places %}
+<section class="place section">
+    <div class="place section">
+        <div class="search__data">
+            <h5 class="section__title2">Here is your All Search Results🙂</h5>
+        </div>
+        <p class="section__title search">Search results in Places</p>
+        <section class="plac__container container grid">
+            <!--==================== PLACES CARD LOOP ====================-->
+            {% for item in places %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %} 
+            {% for item in search_place %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><br><p class="section__title search">Search results in Hotels</p>
+        <section class="place__container container grid">
+            <!--==================== HOTEL LOOP ====================-->
+            {% for item in hotels %}
+            <div class="hotel__card">
+                <img src="{{item.image.url}}" alt="" class="hotel__img">
+                <div class="place__content">
+                    <span class="hotel__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="hotel__title">{{item.hotel_title}}</h3>
+                        <h2 class="hotel__description">{{item.discription}}</h2>
+                        <span class="hotel__description">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.hotel_title}}">
+                    <button class="button button--flex
+                    hotel__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><p class="section__title search">Search results in Articles</p>
+        <section class="article " >
+            <!--==================== ARTICLE CARD LOOP ====================-->
+            {% for item in article %}
+            <div class="article__container container grid">
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                        <img src="{{item.image.url}}" alt="" class="article__img-one">
+                        <h1 class="article__title">{{item.title}}</h1>
+                        <h3 class="article__star">{{item.rating}}</h3>
+                        <p class="article__para">{{item.content}}</p>
+                        <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</section>
+{% elif article %}
+<section class="place section">
+    <div class="place section">
+        <div class="search__data">
+            <h5 class="section__title2">Here is your All Search Results🙂</h5>
+        </div>
+        <p class="section__title search">Search results in Places</p>
+        <section class="plac__container container grid">
+            <!--==================== PLACES CARD LOOP ====================-->
+            {% for item in places %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %} 
+            {% for item in search_place %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><br><p class="section__title search">Search results in Hotels</p>
+        <section class="place__container container grid">
+            <!--==================== HOTEL LOOP ====================-->
+            {% for item in hotels %}
+            <div class="hotel__card">
+                <img src="{{item.image.url}}" alt="" class="hotel__img">
+                <div class="place__content">
+                    <span class="hotel__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="hotel__title">{{item.hotel_title}}</h3>
+                        <h2 class="hotel__description">{{item.discription}}</h2>
+                        <span class="hotel__description">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.hotel_title}}">
+                    <button class="button button--flex
+                    hotel__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><p class="section__title search">Search results in Articles</p>
+        <section class="article " >
+            <!--==================== ARTICLE CARD LOOP ====================-->
+            {% for item in article %}
+            <div class="article__container container grid">
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                        <img src="{{item.image.url}}" alt="" class="article__img-one">
+                        <h1 class="article__title">{{item.title}}</h1>
+                        <h3 class="article__star">{{item.rating}}</h3>
+                        <p class="article__para">{{item.content}}</p>
+                        <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</section>
+{% elif hotels %}
+<section class="place section">
+    <div class="place section">
+        <div class="search__data">
+            <h5 class="section__title2">Here is your All Search Results🙂</h5>
+        </div>
+        <p class="section__title search">Search results in Places</p>
+        <section class="plac__container container grid">
+            <!--==================== PLACES CARD LOOP ====================-->
+            {% for item in places %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %} 
+            {% for item in search_place %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><br><p class="section__title search">Search results in Hotels</p>
+        <section class="place__container container grid">
+            <!--==================== HOTEL LOOP ====================-->
+            {% for item in hotels %}
+            <div class="hotel__card">
+                <img src="{{item.image.url}}" alt="" class="hotel__img">
+                <div class="place__content">
+                    <span class="hotel__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="hotel__title">{{item.hotel_title}}</h3>
+                        <h2 class="hotel__description">{{item.discription}}</h2>
+                        <span class="hotel__description">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.hotel_title}}">
+                    <button class="button button--flex
+                    hotel__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><p class="section__title search">Search results in Articles</p>
+        <section class="article " >
+            <!--==================== ARTICLE CARD LOOP ====================-->
+            {% for item in article %}
+            <div class="article__container container grid">
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                        <img src="{{item.image.url}}" alt="" class="article__img-one">
+                        <h1 class="article__title">{{item.title}}</h1>
+                        <h3 class="article__star">{{item.rating}}</h3>
+                        <p class="article__para">{{item.content}}</p>
+                        <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</section>
+{% elif search_place %}
+<section class="place section">
+    <div class="place section">
+        <div class="search__data">
+            <h5 class="section__title2">Here is your All Search Results🙂</h5>
+        </div>
+        <p class="section__title search">Search results in Places</p>
+        <section class="plac__container container grid">
+            <!--==================== PLACES CARD LOOP ====================-->
+            {% for item in places %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %} 
+            {% for item in search_place %}
+            <div class="place__card">
+                <img src="{{item.image.url}}" alt="" class="place__img">
+                <div class="place__content">
+                    <span class="place__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="place__title">{{item.place_title}}</h3>
+                        <span class="place__subtitle">{{item.location}}</span>
+                        <span class="place__price">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.place_title}}"><button class="button button--flex
+                            place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button></a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><br><p class="section__title search">Search results in Hotels</p>
+        <section class="place__container container grid">
+            <!--==================== HOTEL LOOP ====================-->
+            {% for item in hotels %}
+            <div class="hotel__card">
+                <img src="{{item.image.url}}" alt="" class="hotel__img">
+                <div class="place__content">
+                    <span class="hotel__rating">
+                        {{item.rating}}
+                    </span>
+                    <div class="hotel__data">
+                        <h3 class="hotel__title">{{item.hotel_title}}</h3>
+                        <h2 class="hotel__description">{{item.discription}}</h2>
+                        <span class="hotel__description">{{item.price}}</span>
+                    </div>
+                </div>
+                <a href="{{item.hotel_title}}">
+                    <button class="button button--flex
+                    hotel__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </a>
+            </div>
+            {% endfor %}
+        </section>
+        <br><p class="section__title search">Search results in Articles</p>
+        <section class="article " >
+            <!--==================== ARTICLE CARD LOOP ====================-->
+            {% for item in article %}
+            <div class="article__container container grid">
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                        <img src="{{item.image.url}}" alt="" class="article__img-one">
+                        <h1 class="article__title">{{item.title}}</h1>
+                        <h3 class="article__star">{{item.rating}}</h3>
+                        <p class="article__para">{{item.content}}</p>
+                        <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+</section>
+{% else %}
+<section class="article section" >
+    <div class="article__container container grid">
+        <div class="article__data">
+            <p class="section__title search">Sorry😔, We Couldn't Find Any Result</p>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

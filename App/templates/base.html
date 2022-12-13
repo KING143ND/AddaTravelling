@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title%} {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'assets/icon/Adda Travelling.jpg' %}" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/media.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/hotel.css' %}">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="logo">
+                <img src="{% static 'assets/icon/A2__01.jpg' %}" width="100px">
+            </div>
+            <div class="container-search2">
+                <div class="d-flex justify-content-center ">
+                    <form method="get" action="/search" class="searchbar2">
+                        <input class="search_input2" type="search" name="query" id="query"  placeholder="Search Places, Hotels & Articles">
+                        <button class="search_icon2"><i class="ri-search-line"></i></button>
+                    </form>
+                </div>
+            </div>
+            <a class="nav__logo"></a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    {% if user.is_authenticated %}
+                    <li class="nav__item">
+                        <a href="/signup" class="nav__link r-user">Welcome {{request.user}}<i class="ri-user-3-fill"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/logout" class="nav__link r-lout">Logout <i class="ri-logout-box-r-fill"></i></a>
+                    </li>
+                    {% else %}
+                    <li class="nav__item">
+                        <a href="/login" class="nav__link r-lin {% block active_login %} {% endblock %}">Login <i class="ri-login-box-line"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/signup" class="nav__link r-reg {% block active_register %} {% endblock %}">Register <i class="ri-map-pin-user-fill"></i></a>
+                    </li>
+                    {% endif %}
+                    <div class="container-search">
+                        <div class="d-flex justify-content-center ">
+                            <form method="get" action="/search" class="searchbar">
+                                <input class="search_input" type="search" name="query" id="query"  placeholder="Search Places & Hotels">
+                                <button class="search_icon"><i class="ri-search-line"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <li class="nav__item">
+                        <a href="/" class="nav__link r-home {% block active_home %} {% endblock %}">Home <i class="ri-home-2-fill"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/tour" class="nav__link r-dis {% block active_discover %} {% endblock %}">Discover <i class="ri-police-car-fill"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/hotels" class="nav__link r-hotel {% block active_hotel %} {% endblock %}">Hotels <i class="ri-hotel-line"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/articles" class="nav__link r-art {% block active_article %} {% endblock %}">Articles <i class="ri-article-fill"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/places" class="nav__link r-place {% block active_place %} {% endblock %}">Places <i class="ri-ancient-gate-fill"></i></a>
+                    </li>
+                </ul>
+                <div class="nav__dark">
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div> 
+        </nav>
+        {% for message in messages  %}
+            <div class="alert {{ message.tags }}">
+                <input type="checkbox" id="alert1"/>
+            <label class="close" title="close" for="alert1">
+              <i class="icon-remove">&times;</i>
+            </label>
+                <p class="inner">
+                    <strong>Massage: </strong> {{ message }}
+                </p>
+            </div>
+        {% endfor %}
+    </header>
+    <main class="main">
+
+        {% block body %}
+        
+        {% endblock %}
+        
+        <section class="sponsor section">
+            <div class="sponsor__container container grid">
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/7up.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/firefox.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/oneplus.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/kfc.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/honda1.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/reebok.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/dove1.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/puma.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/harleyd.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/cocacola1.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/mi.png' %}" alt="" class="sponsor__img">
+                </div>
+                <div class="sponsor__content">
+                    <img src="{% static 'assets/brands/Hyundai1.png' %}" alt="" class="sponsor__img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title">Travel</h3>
+                    <p class="footer__description">Travel you choose the
+                        <br> destination, we offer you the <br> experience.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="fl-fb">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="fl-ig">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="fl-tw">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="fl-wp">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                        <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="fl-yt">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">About</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="/about" class="footer__link">About
+                                    Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/features" class="footer__link">Features</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/news" class="footer__link">Company
+                                    News</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Collection</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="/team" class="footer__link">Team</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/tour" class="footer__link">Video Tour</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/hotels" class="footer__link">Hotels</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Support</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="/faq" class="footer__link">FAQs</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/support" class="footer__link">Support
+                                    Center</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="/contact" class="footer__link">Contact
+                                    Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; Adda Travelling. All rights reserved.
+                </p>
+                <div class="footer__terms">
+                    <a href="/terms" class="footer__terms-link">Terms &
+                            Agreements</a>
+                    <a href="/privacy" class="footer__terms-link">Privacy
+                            Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+</body>
+
+</html>

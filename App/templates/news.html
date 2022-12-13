@@ -1,0 +1,60 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title%}Company News{% endblock %}
+
+{% load static %}
+
+{% block body %}
+
+<!--==================== HOME ====================-->
+
+<section class="home" id="home">
+    <img src="{% static 'assets/img/company.jpg' %}" alt="" class="home__img">
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-title">Company<br><b>Imperfect, by<br>Design</b></h1>
+            <h2 class="support__data-subtitle"><b>By Naveen Chaudhary<br>
+            on Monday, 13 December 2021
+        </b></h2>
+            <h3><br>&#169; Adda Travelling. All rights reserved.</h3>
+        </div>
+        <div class="support__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="sl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="sl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="sl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="sl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="sl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--==================== ABOUT ====================-->
+<section class="about section" id="about">
+    <div class="about__container container grid">
+        <div class="about__data">
+            <p class="section__title about__title">Our continued <br>Collaboration with trusted partners</p>
+            <p class="about__description">As we work to improve the content of our website, we will collaborated with Music On Demand for our video tour section... we use copyright free music.
+            </p>
+            <a href="https://youtube.com/music on demand" target="_blank" class="button">Visit Channel</a>
+        </div>
+        <div class="about__img">
+            <div class="about__img-overlay">
+                <img src="{% static 'assets/img/m2.jpg' %}" alt="" class="about__img-one">
+            </div>
+            <div class="about__img-overlay">
+                <img src="{% static 'assets/img/A2.jpg' %}" alt="" class="about__img-two">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

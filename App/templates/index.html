@@ -1,0 +1,797 @@
+<!-- ##### Base Template ##### -->
+{% extends 'base.html' %}
+{% block title %}Adda Travelling{% endblock %}
+{% block active_home %}active-link{% endblock %}
+{% load static %}
+{% block body %}
+<!--==================== HOME ====================-->
+<section class="home" id="home">
+    {% comment %} <img src="{% static 'assets/img/banner.jpg' %}" alt="" class="home__img"> {% endcomment %}
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home2.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home1.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home3.jpg' %}" class="home__img">
+        </div>
+        <div class="mySlides fade">
+            <img src="{% static 'assets/img/home4.jpg' %}" class="home__img">
+        </div>
+    </div>
+    <div class="home__container container grid">
+        <div class="home__data">
+            <h1 class="home__data-subtitle">Discover your place</h1>
+            <h1 class="home__data-title">Explore The <br> Best <b>Beautiful
+                        <br> Places</b></h1>
+            <a href="/places" class="button">Explore</a>
+        </div>
+        <div class="home__social">
+            <a href="https://www.facebook.com/profile.php?id=100077115270793" target="_blank" class="hl-fb">
+                <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a href="https://instagram.com/adda_travelling?utm_medium=copy_link" target="_blank" class="hl-ig">
+                <i class="ri-instagram-fill"></i>
+            </a>
+            <a href="https://twitter.com/AddaTravelling?t=B1e1tcvgpRRHx_3Keq51TQ&s=08" target="_blank" class="hl-tw">
+                <i class="ri-twitter-fill"></i>
+            </a>
+            <a href="https://chat.whatsapp.com/C6hBVWVTERPCQNrABx5ad1" target="_blank" class="hl-wp">
+                <i class="ri-whatsapp-fill"></i>
+            </a>
+            <a href="https://youtube.com/channel/UCpmFodDx9xfJ8YjAXGgcuxg" target="_blank" class="hl-yt">
+                <i class="ri-youtube-fill"></i>
+            </a>
+        </div>
+        <div class="home__info">
+            <div>
+                <span class="home__info-title">Top Hotels<br>for Your Destinations</span>
+                <a href="/hotels" class="button button--flex
+                        button--link home__info-button">
+                        More <i class="ri-arrow-right-line"></i>
+                    </a>
+            </div>
+            <div class="home__info-overlay">
+                <img src="{% static 'assets/img/Dharamshala-Sightseeing.jpg' %}" alt="" class="home__info-img">
+            </div>
+        </div>
+    </div>
+</section>
+<!--==================== ABOUT ====================-->
+    <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <p class="section__title about__title">More Information
+                        <br> About The Best Places</p>
+                    <p class="about__description">You can find the most beautiful and pleasant places at the best prices with special discounts, you choose the place we will guide you all the way to wait, get your place now.
+                    </p>
+                    <a href="/places" class="button">Reserve a place</a>
+                </div>
+                <div class="about__img">
+                    <div class="about__img-overlay">
+                        <img src="{% static 'assets/img/400pxTaj_Mahal_2002.jpeg' %}" alt="" class="about__img-one">
+                    </div>
+                    <div class="about__img-overlay">
+                        <img src="{% static 'assets/img/Hawa Mahal.jpg' %}" alt="" class="about__img-two">
+                    </div>
+                </div>
+            </div>
+    </section>
+<!--==================== DISCOVER ====================-->
+    <section class="discover section" id="discover">
+            <p class="section__title">Discover the most <br> attractive places
+            </p>
+            <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!--==================== DISCOVER 1 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="{% static 'assets/img/Golden temple.jpeg' %}" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Golden Temple</h2>
+                            <h2 class="discover__description">13 tours available
+                            </h2>
+                        </div>
+                    </div>
+                    <!--==================== DISCOVER 2 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="{% static 'assets/img/Rajasthan.jpeg' %}" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Rajasthan</h2>
+                            <h2 class="discover__description">24 tours available
+                            </h2>
+                        </div>
+                    </div>
+                    <!--==================== DISCOVER 3 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="{% static 'assets/img/Gujrat.jpeg' %}" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Gujrat</h2>
+                            <h2 class="discover__description">18 tours available
+                            </h2>
+                        </div>
+                    </div>
+                    <!--==================== DISCOVER 4 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="{% static 'assets/img/Rajasthan2.jpeg' %}" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Madhya Pradesh</h2>
+                            <h2 class="discover__description">40 tours available
+                            </h2>
+                        </div>
+                    </div>
+                    <!--==================== DISCOVER 5 ====================-->
+                    <div class="discover__card swiper-slide">
+                        <img src="{% static 'assets/img/discover4.jpg' %}" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Goa Beaches</h2>
+                            <h2 class="discover__description">32 tours available
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+<!--==================== EXPERIENCE ====================-->
+    <section class="experience section">
+            <p class="section__title">With Our Experience <br> We Will Serve You</p>
+
+            <div class="experience__container container grid">
+                <div class="experience__content grid">
+                    <div class="experience__data">
+                        <h2 class="experience__number">13</h2>
+                        <span class="experience__description">Months <br>
+                                Experience</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">45</h2>
+                        <span class="experience__description">Complete <br>
+                                Tours</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">150+</h2>
+                        <span class="experience__description">Tourist <br>
+                                Destination</span>
+                    </div>
+                </div>
+                <div class="experience__img grid">
+                    <div class="experience__overlay">
+                        <img src="{% static 'assets/img/Haridwar-Kumbh-Mela.jpg' %}" alt="" class="experience__img-one">
+                    </div>
+
+                    <div class="experience__overlay">
+                        <img src="{% static 'assets/img/Auli-Hill-station.jpg' %}" alt="" class="experience__img-two">
+                    </div>
+                </div>
+            </div>
+    </section>
+<!--==================== VIDEO ====================-->
+    <section class="video section">
+            <p class="section__title">Video Tour</p>
+            <div class="video__container container">
+                <p class="video__description">Find out more with our video of the most beautiful and pleasant places for you and your family.
+                </p>
+
+                <div class="video__card">
+                <!--==================== VIDEO CARD LOOP ====================-->
+                    {% for item in allvideo %}
+                    <div class="video__container container">
+                        <div class="video__content">
+                            <iframe width="600" height="340" src="{{item.url}}">
+                                </iframe>
+                            <h1 class="video__title">{{item.title}}</h1>
+                            <h3 class="video__star">{{item.rating}}</h3>
+                        </div>
+                        <div class="video__content2">
+                            <iframe width="300" height="170" src="{{item.url}}">
+                                </iframe>
+                            <h1 class="video__title">{{item.title}}</h1>
+                            <h3 class="video__star">{{item.rating}}</h3>
+                        </div>
+                        <div class="video__content3">
+                            <iframe width="240" height="134" src="{{item.url}}">
+                                </iframe>
+                            <h1 class="video__title">{{item.title}}</h1>
+                            <h3 class="video__star">{{item.rating}}</h3>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+    </section>
+<!--==================== ARTICLES ====================-->
+    <section class="article section" id="article">
+            <div class="article__container container grid">
+                <div class="article__data">
+                    <p class="section__title">Articles <br> Most Visited Places
+                    </p>
+                    <p class="article__description">You can find the most visited places at our article section, you can find the proper knowledge of your destination with the help of our article section.
+                    </p>
+                    <a href="/articles" class="button">More Articles</a>
+                </div>
+                <!--==================== ARTICLE CARD ====================-->
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.11.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.11.title}}</h1>
+                            <h3 class="article__star">{{allarticle.11.rating}}</h3>
+                            <p class="article__para">{{allarticle.11.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.18.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.18.title}}</h1>
+                            <h3 class="article__star">{{allarticle.18.rating}}</h3>
+                            <p class="article__para">{{allarticle.18.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.34.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.34.title}}</h1>
+                            <h3 class="article__star">{{allarticle.34.rating}}</h3>
+                            <p class="article__para">{{allarticle.34.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.35.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.35.title}}</h1>
+                            <h3 class="article__star">{{allarticle.35.rating}}</h3>
+                            <p class="article__para">{{allarticle.35.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.47.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.47.title}}</h1>
+                            <h3 class="article__star">{{allarticle.47.rating}}</h3>
+                            <p class="article__para">{{allarticle.47.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.48.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.48.title}}</h1>
+                            <h3 class="article__star">{{allarticle.48.rating}}</h3>
+                            <p class="article__para">{{allarticle.48.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.58.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.58.title}}</h1>
+                            <h3 class="article__star">{{allarticle.58.rating}}</h3>
+                            <p class="article__para">{{allarticle.58.content}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__card">
+                    <div class="article__img">
+                        <div class="article__img-overlay">
+                            <img src="{{allarticle.12.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{allarticle.12.title}}</h1>
+                            <h3 class="article__star">{{allarticle.12.rating}}</h3>
+                            <p class="article__para">{{allarticle.12.content}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+<!--==================== HOTELS ====================-->
+    <section class="discover section" id="hotel">
+        <p class="section__title">Hotels & resorts to stay
+        </p>
+        <p class="video__description">Top Stay options curated by Adda Travelling for your Travel needs</p>
+        <div class="place__container container grid">
+                <!--==================== HOTEL CARD ====================-->
+                <div class="hotel__card">
+                    <img src="{{allhotel.10.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.10.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.10.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.10.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.10.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.10.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.17.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.17.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.17.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.17.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.17.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.17.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.24.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.24.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.24.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.24.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.24.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.24.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.45.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.45.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.45.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.45.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.45.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.45.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.42.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.42.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.42.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.42.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.42.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.42.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.1.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.1.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.1.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.1.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.1.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.1.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.4.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.4.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.4.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.4.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.4.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.4.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.13.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.13.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.13.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.13.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.13.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.13.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.23.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.23.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.23.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.23.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.23.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.23.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.20.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.20.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.20.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.20.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.20.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.20.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.27.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.27.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.27.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.27.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.27.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.27.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.53.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.53.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.53.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.53.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.53.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.53.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.36.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.36.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.36.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.36.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.36.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.36.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.58.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.58.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.58.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.58.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.58.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.58.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="hotel__card">
+                    <img src="{{allhotel.3.image.url}}" alt="" class="hotel__img">
+                    <div class="place__content">
+                        <span class="hotel__rating">
+                            {{allhotel.3.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="hotel__title">{{allhotel.3.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{allhotel.3.discription}}</h2>
+                            <span class="hotel__description">{{allhotel.3.price}}</span>
+                        </div>
+                    </div>
+                    <a href="hotels/{{allhotel.3.hotel_title}}">
+                        <button class="button button--flex
+                        hotel__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+        </div>
+    </section>
+<!--====================PLACES====================-->
+    <section class="place section" id="place">
+            <p class="section__title">Choose Your Place</p>
+            <div class="plac__container container grid">
+                <!--==================== PLACES CARD LOOP ====================--> 
+                <div class="place__card">
+                    <img src="{{allplace.34.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.34.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.34.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.34.location}}</span>
+                            <span class="place__price">{{allplace.34.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.34.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.0.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.0.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.0.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.0.location}}</span>
+                            <span class="place__price">{{allplace.0.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.0.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.15.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.15.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.15.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.15.location}}</span>
+                            <span class="place__price">{{allplace.15.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.15.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.17.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.17.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.17.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.17.location}}</span>
+                            <span class="place__price">{{allplace.17.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.17.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.21.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.21.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.21.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.21.location}}</span>
+                            <span class="place__price">{{allplace.21.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.21.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.16.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.16.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.16.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.16.location}}</span>
+                            <span class="place__price">{{allplace.16.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.16.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.31.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.31.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.31.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.31.location}}</span>
+                            <span class="place__price">{{allplace.31.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.31.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.3.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.3.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.3.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.3.location}}</span>
+                            <span class="place__price">{{allplace.3.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.3.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.4.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.4.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.4.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.4.location}}</span>
+                            <span class="place__price">{{allplace.4.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.4.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+                <div class="place__card">
+                    <img src="{{allplace.2.image.url}}" alt="" class="place__img">
+                    <div class="place__content">
+                        <span class="place__rating">
+                            {{allplace.2.rating}}
+                        </span>
+                        <div class="hotel__data">
+                            <h3 class="place__title">{{allplace.2.place_title}}</h3>
+                            <span class="place__subtitle">{{allplace.2.location}}</span>
+                            <span class="place__price">{{allplace.2.price}}</span>
+                        </div>
+                    </div>
+                    <a href="places/{{allplace.2.place_title}}">
+                        <button class="button button--flex
+                        place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+    </section>
+    
+{% endblock %}
+
+        
+    
