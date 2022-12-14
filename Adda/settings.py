@@ -25,10 +25,10 @@ SECRET_KEY = 'django-insecure-dbhg3j_3k9a86w!opg(n=&-q(qk-a0@k0$nqn1ky4ra)kav1h0
 # SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-dbhg3j_3k9a86w!opg(n=&-q(qk-a0@k0$nqn1ky4ra)kav1h0')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 # ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
@@ -132,8 +132,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-STATICFILES_DIRS = os.path.join(BASE_DIR,'App/static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = os.path.join(BASE_DIR,'App/static'),
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Following settings only make sense on production and may break development environments.
 # if not DEBUG:
