@@ -1,0 +1,155 @@
+.hotel__container {
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.h__img {
+    width: 100%;
+    height: 100%;
+}
+
+.h__star {
+    font-size: 1.33rem;
+    color: orangered;
+    margin-top: -1.5rem;
+}
+
+.h__title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.h__subtitle {
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.h__star:hover {
+    color: aqua;
+}
+
+.h__title:hover {
+    color: rgb(255, 177, 20);
+}
+
+.h__subtitle:hover {
+    color: #00afa0;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    text-align: center;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #e60000;
+}
+
+.p {
+    text-align: center;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    color: white;
+}
+
+.html {
+    width: 93%;
+    border-radius: 13px;
+    background-color: #04AA6D;
+}
+
+.css {
+    width: 93%;
+    border-radius: 13px;
+    background-color: #2196F3;
+}
+
+.js {
+    width: 88%;
+    border-radius: 13px;
+    background-color: #f44336;
+}
+
+.php {
+    width: 90%;
+    border-radius: 13px;
+    background-color: #f02cb5;
+}
+
+.w3-card-4 {
+    justify-content: center;
+    align-items: center;
+    display: initial;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 4rem;
+}
