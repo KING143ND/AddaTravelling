@@ -21,7 +21,10 @@ from django.contrib.staticfiles.urls import static
 from django.views.static import serve
 # from django.conf.urls import url
 from django.urls import include, re_path as url
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81dd3c9a3b36bf28ebf1f85c04cfb7f677dcbde7
 
 urlpatterns = [
     path('admin/', admin.site.urls),
