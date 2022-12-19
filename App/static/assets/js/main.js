@@ -9,7 +9,6 @@ if (navToggle) {
     })
 }
 
-
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
@@ -18,19 +17,12 @@ if (navClose) {
 
 const navLink = document.querySelectorAll('.nav__link')
 
+
 function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
-
-
-function scrollHeader() {
-    const header = document.getElementById('header')
-    if (this.scrollY >= 100) header.classList.add('scroll-header');
-    else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
 
 let swiper = new Swiper(".discover__container", {
     effect: "coverflow",
@@ -44,7 +36,6 @@ let swiper = new Swiper(".discover__container", {
     },
 })
 
-
 function scrollUp() {
     const scrollUp = document.getElementById('scroll-up');
     if (this.scrollY >= 200) scrollUp.classList.add('show-scroll');
@@ -53,6 +44,7 @@ function scrollUp() {
 window.addEventListener('scroll', scrollUp)
 
 const sections = document.querySelectorAll('section[id]')
+
 
 function scrollActive() {
     const scrollY = window.pageYOffset
@@ -70,8 +62,6 @@ function scrollActive() {
     })
 }
 window.addEventListener('scroll', scrollActive)
-
-
 
 const sr = ScrollReveal({
     distance: '60px',
@@ -117,6 +107,7 @@ sr.reveal(`.al-em,.al-fb,.al-ig,.al-pn,.al-tw,.al-wp`, {
     origin: 'right',
     interval: 600,
 })
+
 sr.reveal(`.place__title,.place__subtitle,.place__price`, {
     origin: 'left',
     interval: 200,
@@ -131,12 +122,11 @@ sr.reveal(`.ri-first-aid-kit-fill,.ri-goblet-fill,
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
-
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
-
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
 
 if (selectedTheme) {
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)

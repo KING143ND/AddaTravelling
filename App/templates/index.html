@@ -6,24 +6,8 @@
 {% block body %}
 <!--==================== HOME ====================-->
 <section class="home" id="home">
-    {% comment %} <img src="{% static 'assets/img/banner.jpg' %}" alt="" class="home__img"> {% endcomment %}
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="{% static 'assets/img/home.jpg' %}" class="home__img">
-        </div>
-        <div class="mySlides fade">
-            <img src="{% static 'assets/img/home2.jpg' %}" class="home__img">
-        </div>
-        <div class="mySlides fade">
-            <img src="{% static 'assets/img/home1.jpg' %}" class="home__img">
-        </div>
-        <div class="mySlides fade">
-            <img src="{% static 'assets/img/home3.jpg' %}" class="home__img">
-        </div>
-        <div class="mySlides fade">
-            <img src="{% static 'assets/img/home4.jpg' %}" class="home__img">
-        </div>
-    </div>
+    <img src="{% static 'assets/img/place.jpg' %}" class="home__img">
+
     <div class="home__container container grid">
         <div class="home__data">
             <h1 class="home__data-subtitle">Discover your place</h1>
@@ -183,19 +167,19 @@
                     {% for item in allvideo %}
                     <div class="video__container container">
                         <div class="video__content">
-                            <iframe width="600" height="340" src="{{item.url}}">
+                            <iframe src="{{item.url}}">
                                 </iframe>
                             <h1 class="video__title">{{item.title}}</h1>
                             <h3 class="video__star">{{item.rating}}</h3>
                         </div>
                         <div class="video__content2">
-                            <iframe width="300" height="170" src="{{item.url}}">
+                            <iframe src="{{item.url}}">
                                 </iframe>
                             <h1 class="video__title">{{item.title}}</h1>
                             <h3 class="video__star">{{item.rating}}</h3>
                         </div>
                         <div class="video__content3">
-                            <iframe width="240" height="134" src="{{item.url}}">
+                            <iframe src="{{item.url}}">
                                 </iframe>
                             <h1 class="video__title">{{item.title}}</h1>
                             <h3 class="video__star">{{item.rating}}</h3>

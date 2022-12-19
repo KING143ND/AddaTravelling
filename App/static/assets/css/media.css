@@ -58,31 +58,58 @@
     }
 }
 
-@media screen and (min-width: 678px) {
+
+/* @media screen and (min-width: 678px) {
     body {
         margin: 0;
     }
     .nav {
         height: calc(var(--header-height) + 1.5rem);
     }
-}
+    .home__data {
+        margin-top: 5rem;
+        align-self: flex-end;
+    }
+} */
 
 @media screen and (min-width: 320px) {
     .nav {
         height: calc(var(--header-height) + 1.5rem);
     }
     .show-scroll {
-        bottom: 2rem;
+        bottom: 3rem;
     }
     .nav__link {
-        font-size: 0.75rem;
+        font-size: 1.25rem;
         text-transform: initial;
     }
+    .nav__link.r-home.active-link {
+        font-size: 175%;
+    }
+    .nav__link.r-reg.active-link {
+        font-size: 175%;
+    }
+    .nav__link.r-lin.active-link {
+        font-size: 175%;
+    }
+    .nav__link.r-dis.active-link {
+        font-size: 175%;
+    }
+    .nav__link.r-hotel.active-link {
+        font-size: 175%;
+    }
+    .nav__link.r-art.active-link {
+        font-size: 175%;
+    }
+    .nav__link.r-place.active-link {
+        font-size: 175%;
+    }
     .change-theme-name {
-        font-size: 0.75rem;
+        font-size: 1.25rem;
         margin-right: -1rem;
     }
     .ri-moon-line {
+        font-size: 1.25rem;
         margin-right: 5px;
     }
     .nav__item {
@@ -104,7 +131,7 @@
     }
     .searchbar2 {
         height: 40px;
-        background-color: rgb(194, 23, 83);
+        background: linear-gradient(45deg, rgba(255, 75, 129, 0.799), rgba(41, 1, 242, 0.751), rgba(255, 75, 129, 0.799));
         border-radius: 30px;
         padding-left: 20px;
         margin-left: 4px;
@@ -182,7 +209,7 @@
     .home__data {
         align-self: flex-end;
         margin-right: 1.25rem;
-        margin-top: -3.25rem;
+        margin-top: 2.25rem;
     }
     .discover__data {
         position: absolute;
@@ -409,6 +436,11 @@
         flex-direction: row;
         column-gap: 1.5rem;
     }
+    .footer__rights {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: -1.5rem;
+    }
 }
 
 @media screen and (min-width: 375px) {
@@ -416,7 +448,7 @@
         height: calc(var(--header-height) + 1.5rem);
     }
     .nav__link {
-        font-size: 0.95rem;
+        font-size: 1.35rem;
         text-transform: initial;
     }
     .nav__item {
@@ -438,7 +470,7 @@
     }
     .searchbar2 {
         height: 40px;
-        background-color: rgb(194, 23, 83);
+        background: linear-gradient(45deg, rgba(255, 75, 129, 0.799), rgba(41, 1, 242, 0.751), rgba(255, 75, 129, 0.799));
         border-radius: 30px;
         padding-left: 20px;
         margin-left: 0.5px;
@@ -514,6 +546,7 @@
         margin-block-end: 20vh;
     }
     .home__data {
+        margin-top: 2rem;
         align-self: flex-end;
     }
     .discover__data {
@@ -555,6 +588,10 @@
     .experience__overlay:nth-child(2) {
         width: 140px;
     }
+    .video__content2 iframe {
+        width: 312px;
+        height: 175.5px;
+    }
     .video__content {
         display: none;
     }
@@ -565,12 +602,6 @@
         display: none;
     }
     .place__container {
-        gap: 3rem 1rem;
-        grid-template-columns: repeat(1, max-content);
-        justify-content: center;
-        align-items: center;
-    }
-    .plac__container {
         gap: 3rem 1rem;
         grid-template-columns: repeat(1, max-content);
         justify-content: center;
@@ -621,6 +652,7 @@
     .footer__rights {
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: -1.25rem;
     }
     .page-btn span {
         display: inline-block;
@@ -752,7 +784,7 @@
         column-gap: 1.5rem;
     }
     .show-scroll {
-        bottom: 2rem;
+        bottom: 3.25rem;
     }
 }
 
@@ -761,7 +793,7 @@
         height: calc(var(--header-height) + 1.5rem);
     }
     .nav__link {
-        font-size: 0.95rem;
+        font-size: 1.5rem;
         text-transform: initial;
     }
     .nav__item {
@@ -782,7 +814,7 @@
     }
     .searchbar2 {
         height: 40px;
-        background-color: rgb(194, 23, 83);
+        background: linear-gradient(45deg, rgba(255, 75, 129, 0.799), rgba(41, 1, 242, 0.751), rgba(255, 75, 129, 0.799));
         border-radius: 30px;
         padding-left: 20px;
     }
@@ -856,6 +888,7 @@
         margin-block-end: 48px;
     }
     .home__data {
+        margin-top: 4rem;
         align-self: flex-end;
     }
     .discover__data {
@@ -897,13 +930,20 @@
     .experience__overlay:nth-child(2) {
         width: 170px;
     }
-    .place__container {
-        gap: 3rem 1rem;
-        grid-template-columns: repeat(1, max-content);
-        justify-content: center;
-        align-items: center;
+    .video__content2 iframe {
+        width: 360px;
+        height: 202.5px;
     }
-    .plac__container {
+    .video__content {
+        display: none;
+    }
+    .video__content2 {
+        display: initial;
+    }
+    .video__content3 {
+        display: none;
+    }
+    .place__container {
         gap: 3rem 1rem;
         grid-template-columns: repeat(1, max-content);
         justify-content: center;
@@ -950,6 +990,7 @@
     .footer__rights {
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: -1.25rem;
     }
     .page-btn span {
         display: inline-block;
@@ -1069,7 +1110,7 @@
         column-gap: 2rem;
     }
     .show-scroll {
-        bottom: 2rem;
+        bottom: 4rem;
     }
 }
 
@@ -1092,7 +1133,27 @@
     }
     .nav__link {
         font-size: 0.75rem;
-        color: var(--title-color);
+    }
+    .nav__link.r-home.active-link {
+        font-size: 113%;
+    }
+    .nav__link.r-reg.active-link {
+        font-size: 113%;
+    }
+    .nav__link.r-lin.active-link {
+        font-size: 113%;
+    }
+    .nav__link.r-dis.active-link {
+        font-size: 113%;
+    }
+    .nav__link.r-hotel.active-link {
+        font-size: 113%;
+    }
+    .nav__link.r-art.active-link {
+        font-size: 113%;
+    }
+    .nav__link.r-place.active-link {
+        font-size: 113%;
     }
     .logo {
         position: absolute;
@@ -1386,7 +1447,7 @@
     }
     .nav__link {
         font-size: 0.85rem;
-        color: var(--title-color);
+        /* color: var(--title-color); */
     }
     .nav__menu {
         display: flex;
@@ -1781,7 +1842,7 @@
     }
     .nav__link {
         font-size: 1.05rem;
-        color: var(--title-color);
+        /* color: var(--title-color); */
     }
     .r-user {
         font-size: 1.05rem;
@@ -2006,7 +2067,7 @@
     }
     .nav__link {
         font-size: 1.3rem;
-        color: var(--title-color);
+        /* color: var(--title-color); */
     }
     .ri-moon-line {
         font-size: 1.3rem;

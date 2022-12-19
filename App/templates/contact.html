@@ -44,22 +44,25 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName">
+                    <input type="text" id="firstName" name="firstName"
+                    placeholder="Enter Your First Name">
                 </div>
 
                 <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName">
+                    <input type="text" id="lastName" name="lastName"
+                    placeholder="Enter Your Last Name">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email"
+                    placeholder="name@example.com">
                 </div>
 
                 <div class="form-group">
-                    <label for="massage">Massage</label>
-                    <textarea name="massage" id="massage" cols="15" rows="5"></textarea>
+                    <label for="massage">Message</label>
+                    <textarea name="massage" placeholder="Enter Your Message Here....." id="massage" cols="15" rows="5"></textarea>
                 </div>
 
                 <button type="submit">Submit</button>
