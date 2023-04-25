@@ -439,7 +439,7 @@
     .footer__rights {
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: -1.5rem;
+        /* margin-bottom: -1.5rem; */
     }
 }
 
@@ -652,7 +652,7 @@
     .footer__rights {
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: -1.25rem;
+        /* margin-bottom: -1.25rem; */
     }
     .page-btn span {
         display: inline-block;
@@ -990,7 +990,7 @@
     .footer__rights {
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: -1.25rem;
+        /* margin-bottom: -1.25rem; */
     }
     .page-btn span {
         display: inline-block;

@@ -158,3 +158,30 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3000);
 }
+
+function myFunction() {
+    var password = document.getElementById("loginpassword");
+    if (password.type === "password") {
+        password.type = "text";
+    } else {
+        password.type = "password";
+    }
+}
+
+function myFunction2() {
+    var password2 = document.getElementById("pass1");
+    if (password2.type === "password") {
+        password2.type = "text";
+    } else {
+        password2.type = "password";
+    }
+}
+
+function myFunction3() {
+    var password3 = document.getElementById("pass2");
+    if (password3.type === "password") {
+        password3.type = "text";
+    } else {
+        password3.type = "password";
+    }
+}
