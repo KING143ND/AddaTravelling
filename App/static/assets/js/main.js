@@ -66,7 +66,7 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     distance: '60px',
     duration: 1000,
-    // reset: true,
+    reset: true,
 })
 
 
