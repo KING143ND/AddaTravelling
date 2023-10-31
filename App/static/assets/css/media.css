@@ -434,7 +434,6 @@
     .footer__rights {
         flex-direction: row;
         justify-content: space-between;
-        /* margin-bottom: -1.5rem; */
     }
     .section__title {
         font-size: 2rem;
@@ -448,13 +447,11 @@
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 1.5rem;
         text-align: center;
-        margin-top: var(--mb-0-25);
     }
     .article__para {
         font-size: 1rem;
     }
     .support__data-subtitle {
-        max-width: 240px;
         color: #FFF;
     }
     .sl-fb,
