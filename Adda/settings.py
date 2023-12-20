@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-dbhg3j_3k9a86w!opg(n=&-q(qk-a0@k0$nqn1ky4ra)kav1h0
 DEBUG = True
 # DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ["*"]
-# ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
     # ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -84,9 +84,18 @@ WSGI_APPLICATION = 'Adda.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    #========================== Postgresql databse ==========================
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'AddaTravellingDB',
+        'USER': 'naveen',
+        'PASSWORD': 'king143nd',
+        'HOST': 'localhost',  
+        'PORT': '5432', 
     }
 }
 
@@ -130,8 +139,8 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = 'static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'staticfiles')
 
 # Following settings only make sense on production and may break development environments.
 # if not DEBUG:
