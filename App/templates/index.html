@@ -164,7 +164,7 @@
 
                 <div class="video__card">
                 <!--==================== VIDEO CARD LOOP ====================-->
-                    {% for item in allvideo %}
+                    {% for item in paginated_data.Video %}
                     <div class="video__container container">
                         <div class="video__content">
                             <iframe src="{{item.url}}">
@@ -204,80 +204,80 @@
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.11.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.11.title}}</h1>
-                            <h3 class="article__star">{{allarticle.11.rating}}</h3>
-                            <p class="article__para">{{allarticle.11.content}}</p>
+                            <img src="{{paginated_data.Article.11.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.11.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.11.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.11.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.18.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.18.title}}</h1>
-                            <h3 class="article__star">{{allarticle.18.rating}}</h3>
-                            <p class="article__para">{{allarticle.18.content}}</p>
+                            <img src="{{paginated_data.Article.18.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.18.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.18.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.18.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.34.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.34.title}}</h1>
-                            <h3 class="article__star">{{allarticle.34.rating}}</h3>
-                            <p class="article__para">{{allarticle.34.content}}</p>
+                            <img src="{{paginated_data.Article.34.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.34.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.34.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.34.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.35.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.35.title}}</h1>
-                            <h3 class="article__star">{{allarticle.35.rating}}</h3>
-                            <p class="article__para">{{allarticle.35.content}}</p>
+                            <img src="{{paginated_data.Article.35.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.35.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.35.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.35.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.47.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.47.title}}</h1>
-                            <h3 class="article__star">{{allarticle.47.rating}}</h3>
-                            <p class="article__para">{{allarticle.47.content}}</p>
+                            <img src="{{paginated_data.Article.47.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.47.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.47.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.47.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.48.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.48.title}}</h1>
-                            <h3 class="article__star">{{allarticle.48.rating}}</h3>
-                            <p class="article__para">{{allarticle.48.content}}</p>
+                            <img src="{{paginated_data.Article.48.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.48.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.48.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.48.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.58.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.58.title}}</h1>
-                            <h3 class="article__star">{{allarticle.58.rating}}</h3>
-                            <p class="article__para">{{allarticle.58.content}}</p>
+                            <img src="{{paginated_data.Article.58.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.58.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.58.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.58.content}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="article__card">
                     <div class="article__img">
                         <div class="article__img-overlay">
-                            <img src="{{allarticle.12.image.url}}" alt="" class="article__img-one">
-                            <h1 class="article__title">{{allarticle.12.title}}</h1>
-                            <h3 class="article__star">{{allarticle.12.rating}}</h3>
-                            <p class="article__para">{{allarticle.12.content}}</p>
+                            <img src="{{paginated_data.Article.12.image.url}}" alt="" class="article__img-one">
+                            <h1 class="article__title">{{paginated_data.Article.12.title}}</h1>
+                            <h3 class="article__star">{{paginated_data.Article.12.rating}}</h3>
+                            <p class="article__para">{{paginated_data.Article.12.content}}</p>
                         </div>
                     </div>
                 </div>
@@ -291,18 +291,18 @@
         <div class="place__container container grid">
                 <!--==================== HOTEL CARD ====================-->
                 <div class="hotel__card">
-                    <img src="{{allhotel.10.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.10.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.10.rating}}
+                            {{paginated_data.Hotel.10.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.10.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.10.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.10.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.10.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.10.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.10.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.10.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.10.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -310,18 +310,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.17.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.17.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.17.rating}}
+                            {{paginated_data.Hotel.17.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.17.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.17.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.17.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.17.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.17.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.17.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.17.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.17.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -329,18 +329,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.24.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.24.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.24.rating}}
+                            {{paginated_data.Hotel.24.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.24.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.24.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.24.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.24.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.24.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.24.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.24.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.24.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -348,18 +348,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.45.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.45.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.45.rating}}
+                            {{paginated_data.Hotel.45.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.45.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.45.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.45.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.45.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.45.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.45.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.45.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.45.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -367,18 +367,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.42.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.42.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.42.rating}}
+                            {{paginated_data.Hotel.42.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.42.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.42.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.42.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.42.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.42.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.42.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.42.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.42.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -386,18 +386,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.1.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.1.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.1.rating}}
+                            {{paginated_data.Hotel.1.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.1.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.1.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.1.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.1.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.1.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.1.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.1.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.1.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -405,18 +405,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.4.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.4.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.4.rating}}
+                            {{paginated_data.Hotel.4.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.4.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.4.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.4.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.4.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.4.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.4.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.4.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.4.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -424,18 +424,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.13.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.13.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.13.rating}}
+                            {{paginated_data.Hotel.13.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.13.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.13.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.13.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.13.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.13.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.13.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.13.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.13.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -443,18 +443,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.23.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.23.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.23.rating}}
+                            {{paginated_data.Hotel.23.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.23.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.23.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.23.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.23.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.23.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.23.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.23.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.23.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -462,18 +462,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.20.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.20.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.20.rating}}
+                            {{paginated_data.Hotel.20.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.20.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.20.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.20.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.20.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.20.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.20.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.20.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.20.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -481,18 +481,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.27.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.27.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.27.rating}}
+                            {{paginated_data.Hotel.27.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.27.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.27.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.27.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.27.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.27.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.27.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.27.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.27.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -500,18 +500,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.53.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.53.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.53.rating}}
+                            {{paginated_data.Hotel.53.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.53.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.53.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.53.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.53.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.53.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.53.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.53.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.53.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -519,18 +519,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.36.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.36.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.36.rating}}
+                            {{paginated_data.Hotel.36.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.36.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.36.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.36.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.36.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.36.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.36.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.36.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.36.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -538,18 +538,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.58.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.58.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.58.rating}}
+                            {{paginated_data.Hotel.58.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.58.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.58.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.58.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.58.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.58.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.58.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.58.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.58.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -557,18 +557,18 @@
                     </a>
                 </div>
                 <div class="hotel__card">
-                    <img src="{{allhotel.3.image.url}}" alt="" class="hotel__img">
+                    <img src="{{paginated_data.Hotel.3.image.url}}" alt="" class="hotel__img">
                     <div class="place__content">
                         <span class="hotel__rating">
-                            {{allhotel.3.rating}}
+                            {{paginated_data.Hotel.3.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="hotel__title">{{allhotel.3.hotel_title}}</h3>
-                            <h2 class="hotel__description">{{allhotel.3.discription}}</h2>
-                            <span class="hotel__description">{{allhotel.3.price}}</span>
+                            <h3 class="hotel__title">{{paginated_data.Hotel.3.hotel_title}}</h3>
+                            <h2 class="hotel__description">{{paginated_data.Hotel.3.discription}}</h2>
+                            <span class="hotel__description">{{paginated_data.Hotel.3.price}}</span>
                         </div>
                     </div>
-                    <a href="hotels/{{allhotel.3.hotel_title}}">
+                    <a href="hotels/{{paginated_data.Hotel.3.hotel_title}}">
                         <button class="button button--flex
                         hotel__button">
                             <i class="ri-arrow-right-line"></i>
@@ -583,18 +583,18 @@
             <div class="plac__container container grid">
                 <!--==================== PLACES CARD LOOP ====================--> 
                 <div class="place__card">
-                    <img src="{{allplace.34.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.34.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.34.rating}}
+                            {{paginated_data.Place.34.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.34.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.34.location}}</span>
-                            <span class="place__price">{{allplace.34.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.34.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.34.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.34.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.34.place_title}}">
+                    <a href="places/{{paginated_data.Place.34.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -602,18 +602,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.0.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.0.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.0.rating}}
+                            {{paginated_data.Place.0.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.0.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.0.location}}</span>
-                            <span class="place__price">{{allplace.0.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.0.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.0.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.0.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.0.place_title}}">
+                    <a href="places/{{paginated_data.Place.0.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -621,18 +621,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.15.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.15.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.15.rating}}
+                            {{paginated_data.Place.15.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.15.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.15.location}}</span>
-                            <span class="place__price">{{allplace.15.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.15.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.15.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.15.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.15.place_title}}">
+                    <a href="places/{{paginated_data.Place.15.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -640,18 +640,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.17.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.17.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.17.rating}}
+                            {{paginated_data.Place.17.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.17.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.17.location}}</span>
-                            <span class="place__price">{{allplace.17.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.17.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.17.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.17.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.17.place_title}}">
+                    <a href="places/{{paginated_data.Place.17.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -659,18 +659,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.21.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.21.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.21.rating}}
+                            {{paginated_data.Place.21.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.21.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.21.location}}</span>
-                            <span class="place__price">{{allplace.21.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.21.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.21.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.21.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.21.place_title}}">
+                    <a href="places/{{paginated_data.Place.21.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -678,18 +678,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.16.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.16.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.16.rating}}
+                            {{paginated_data.Place.16.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.16.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.16.location}}</span>
-                            <span class="place__price">{{allplace.16.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.16.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.16.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.16.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.16.place_title}}">
+                    <a href="places/{{paginated_data.Place.16.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -697,18 +697,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.31.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.31.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.31.rating}}
+                            {{paginated_data.Place.31.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.31.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.31.location}}</span>
-                            <span class="place__price">{{allplace.31.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.31.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.31.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.31.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.31.place_title}}">
+                    <a href="places/{{paginated_data.Place.31.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -716,18 +716,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.3.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.3.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.3.rating}}
+                            {{paginated_data.Place.3.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.3.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.3.location}}</span>
-                            <span class="place__price">{{allplace.3.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.3.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.3.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.3.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.3.place_title}}">
+                    <a href="places/{{paginated_data.Place.3.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -735,18 +735,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.4.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.4.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.4.rating}}
+                            {{paginated_data.Place.4.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.4.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.4.location}}</span>
-                            <span class="place__price">{{allplace.4.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.4.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.4.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.4.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.4.place_title}}">
+                    <a href="places/{{paginated_data.Place.4.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>
@@ -754,18 +754,18 @@
                     </a>
                 </div>
                 <div class="place__card">
-                    <img src="{{allplace.2.image.url}}" alt="" class="place__img">
+                    <img src="{{paginated_data.Place.2.image.url}}" alt="" class="place__img">
                     <div class="place__content">
                         <span class="place__rating">
-                            {{allplace.2.rating}}
+                            {{paginated_data.Place.2.rating}}
                         </span>
                         <div class="hotel__data">
-                            <h3 class="place__title">{{allplace.2.place_title}}</h3>
-                            <span class="place__subtitle">{{allplace.2.location}}</span>
-                            <span class="place__price">{{allplace.2.price}}</span>
+                            <h3 class="place__title">{{paginated_data.Place.2.place_title}}</h3>
+                            <span class="place__subtitle">{{paginated_data.Place.2.location}}</span>
+                            <span class="place__price">{{paginated_data.Place.2.price}}</span>
                         </div>
                     </div>
-                    <a href="places/{{allplace.2.place_title}}">
+                    <a href="places/{{paginated_data.Place.2.place_title}}">
                         <button class="button button--flex
                         place__button">
                             <i class="ri-arrow-right-line"></i>

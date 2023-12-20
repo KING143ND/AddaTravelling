@@ -1,66 +1,31 @@
 # Create your views here.
-from email import message
-from http.client import HTTPResponse
-from multiprocessing import AuthenticationError
-from pydoc import pager
-import random
-from turtle import title
-from django.contrib import messages 
+from django.contrib import messages, auth
 from django.shortcuts import render, redirect
-from django.contrib.auth  import authenticate,  login, logout
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-from pyparsing import And, Or
 from . models import Article, Contact, Place, Video, Hotel
-from django.contrib.auth.models import User, auth
-from django.contrib.auth.decorators import *
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    allvideo = Video.objects.all()
-    paginator = Paginator(allvideo,5)
-    page_number = request.GET.get('page')
-    try:
-        allvideo = paginator.page(page_number)
-    except PageNotAnInteger:
-        allvideo = paginator.page(1)
-    except EmptyPage:
-        allvideo = paginator.page(paginator.num_pages)
-    index_videos = {'allvideo':allvideo,'page':page_number}
-    
-    allarticle = Article.objects.all()
-    paginator = Paginator(allarticle,100)
-    page_number = request.GET.get('page')
-    try:
-        allarticle = paginator.page(page_number)
-    except PageNotAnInteger:
-        allarticle = paginator.page(1)
-    except EmptyPage:
-        allarticle = paginator.page(paginator.num_pages)
-    index_articles = {'allarticle':allarticle,'page':page_number}
-    
-    allhotel = Hotel.objects.all()
-    paginator = Paginator(allhotel,100)
-    page_number = request.GET.get('page')
-    try:
-        allhotel = paginator.page(page_number)
-    except PageNotAnInteger:
-        allhotel = paginator.page(1)
-    except EmptyPage:
-        allhotel = paginator.page(paginator.num_pages)
-    index_hotels = {'allhotel':allhotel,'page':page_number}
-    
-    allplace = Place.objects.all()
-    paginator = Paginator(allplace,100)
-    page_number = request.GET.get('page')
-    try:
-        allplace = paginator.page(page_number)
-    except PageNotAnInteger:
-        allplace = paginator.page(1)
-    except EmptyPage:
-        allplace = paginator.page(paginator.num_pages)
-    index_places = {'allplace':allplace,'page':page_number}
-
-    return render(request,"index.html",index_videos|index_articles|index_hotels|index_places)
+    models = {
+        'Video': Video.objects.all().order_by("pk"),
+        'Article': Article.objects.all().order_by("pk"),
+        'Hotel': Hotel.objects.all().order_by("pk"),
+        'Place': Place.objects.all().order_by("pk"),
+    }
+    paginated_data = {}
+    for model_name, queryset in models.items():
+        paginator = Paginator(queryset, 100)
+        page_number = request.GET.get('page')
+        try:
+            paginated_data[model_name] = paginator.page(page_number)
+        except PageNotAnInteger:
+            paginated_data[model_name] = paginator.page(1)
+        except EmptyPage:
+            paginated_data[model_name] = paginator.page(paginator.num_pages)
+    context = {'paginated_data': paginated_data}
+    return render(request, "index.html", context)
 
 
 @login_required(login_url="/login")
@@ -142,7 +107,9 @@ def login(request):
         if user is not None:
             auth.login(request,user)
             messages.success(request, f"Successfully Logged In.. Welcome {loginusername}!🙂")
-            return redirect("/")
+            next_param = request.POST.get('next')
+            if next_param:
+                return redirect(next_param)
         else:
             messages.error(request,"Invalid Credentials!😟")
             return redirect("/login")
@@ -243,8 +210,8 @@ def search(request):
     elif len(query)<3:
         messages.error(request, "Your Search Query cannot be less than 3 Characters!😠")
         return redirect('/')
-    elif len(query)>20:
-        messages.error(request, "Your Search Query cannot be more than 20 Characters!😠")
+    elif len(query)>30:
+        messages.error(request, "Your Search Query cannot be more than 30 Characters!😠")
         return redirect('/')
     search_place = Place.objects.filter(location__icontains = query)
     places = Place.objects.filter(place_title__icontains = query)
@@ -284,7 +251,7 @@ def search_hotels(request, hotel_title):
 
 @login_required(login_url="/login")
 def tour(request):
-    allvideo = Video.objects.all()
+    allvideo = Video.objects.all().defer('url')
     paginator = Paginator(allvideo,15)
     page_number = request.GET.get('page')
     try:
@@ -339,7 +306,6 @@ def allplaces(request, place_title):
     return render(request,"allplaces.html",index_videos|index_articles|index_hotels|index_places)
     
     
-
 @login_required(login_url="/login")
 def places(request):
     allplace = Place.objects.all()

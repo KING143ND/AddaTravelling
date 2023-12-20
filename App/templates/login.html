@@ -47,8 +47,11 @@
             <p class="section__title subscribe__title">Welcome To<br>Login Section</p>
             <p class="subscribe__description">India's favourite Trip planning website. Coming soon to the entire world.
             </p>
-            <form action="/login/" method="POST" id="my-form">
+            <form action="{% url 'App:login' %}" method="POST" id="my-form">
                 {% csrf_token %}
+                {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                {% endif %}
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Enter your username "required>
