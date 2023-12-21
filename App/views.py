@@ -110,6 +110,8 @@ def login(request):
             next_param = request.POST.get('next')
             if next_param:
                 return redirect(next_param)
+            if next_param is None:
+                return redirect("/")
         else:
             messages.error(request,"Invalid Credentials!😟")
             return redirect("/login")
