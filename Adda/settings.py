@@ -90,7 +90,7 @@ DATABASES = {
     # }
     #========================== Postgresql databse ==========================
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'AddaTravellingDB',
         'USER': 'naveen',
         'PASSWORD': 'king143nd',
