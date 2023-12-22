@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-dbhg3j_3k9a86w!opg(n=&-q(qk-a0@k0$nqn1ky4ra)kav1h0
 DEBUG = True
 # DEBUG = 'RENDER' not in os.environ
 
-# ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 # RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 # if RENDER_EXTERNAL_HOSTNAME:
     # ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -91,10 +91,10 @@ DATABASES = {
     #========================== Postgresql databse ==========================
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'AddaTravellingDB',
-        'USER': 'naveen',
-        'PASSWORD': 'king143nd',
-        'HOST': 'localhost',  
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': '3fjMIKBCetw6',
+        'HOST': 'ep-lucky-leaf-47786588-pooler.us-east-1.postgres.vercel-storage.com',  
         'PORT': '5432', 
     }
 }
@@ -124,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -139,8 +139,8 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = 'static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'staticfiles')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Following settings only make sense on production and may break development environments.
 # if not DEBUG:

@@ -62,6 +62,7 @@ class Place(models.Model):
     price = models.CharField(max_length=10, default="")
     rating = models.CharField(max_length=20, default="")
     image = models.ImageField()
+    image_url = models.URLField(default="")
     
     def __str__(self):
         return self.place_title

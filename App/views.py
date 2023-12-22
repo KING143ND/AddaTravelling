@@ -28,22 +28,22 @@ def index(request):
     return render(request, "index.html", context)
 
 
-@login_required(login_url="/login")
+
 def about(request):
     return render(request,"about.html")
 
 
-@login_required(login_url="/login")
+
 def features(request):
     return render(request,"features.html")
 
 
-@login_required(login_url="/login")
+
 def news(request):
     return render(request,"news.html")
 
 
-@login_required(login_url="/login")
+
 def contact(request):
     if request.method=="POST":
         firstName=request.POST['firstName']
@@ -94,7 +94,7 @@ def contact(request):
     return render(request, "contact.html")
 
 
-@login_required(login_url="/login")
+
 def team(request):
     return render(request,"team.html")
 
@@ -203,7 +203,7 @@ def signup(request):
     return render(request, "signup.html")
 
 
-@login_required(login_url="/login")
+
 def search(request):
     query = request.GET['query']
     if len(query)==0:
@@ -226,7 +226,7 @@ def search(request):
     return render(request,"search.html", search_results)
 
 
-@login_required(login_url="/login")
+
 def search_places(request, place_title):
     places = Place.objects.filter(place_title = place_title)
     index_places = {'places':places}
@@ -243,7 +243,7 @@ def search_places(request, place_title):
     return render(request,"allplaces.html",index_videos|index_articles|index_hotels|index_places)
    
     
-@login_required(login_url="/login")
+
 def search_hotels(request, hotel_title):
     hotels = Hotel.objects.filter(hotel_title = hotel_title)
     index_hotels = {'hotels':hotels}
@@ -251,7 +251,7 @@ def search_hotels(request, hotel_title):
     return render(request,"allhotels.html",index_hotels)
 
 
-@login_required(login_url="/login")
+
 def tour(request):
     allvideo = Video.objects.all().defer('url')
     paginator = Paginator(allvideo,15)
@@ -267,7 +267,7 @@ def tour(request):
     return render(request,"tour.html",index_videos)
 
 
-@login_required(login_url="/login")
+
 def hotels(request):
     allhotel = Hotel.objects.all()
     paginator = Paginator(allhotel,60)
@@ -282,7 +282,7 @@ def hotels(request):
     
     return render(request,"hotels.html",index_hotels)
 
-@login_required(login_url="/login")
+
 def allhotels(request, hotel_title):
     hotels = Hotel.objects.filter(hotel_title = hotel_title)
     allhotel = Hotel.objects.all()
@@ -291,26 +291,19 @@ def allhotels(request, hotel_title):
     return render(request,"allhotels.html",index_hotels)
 
 
-@login_required(login_url="/login")
+
 def allplaces(request, place_title):
-    places = Place.objects.filter(place_title = place_title)
-    index_places = {'places':places}
-    
+    places = Place.objects.filter(place_title = place_title)    
     allvideo = Video.objects.filter(title = place_title)
-    index_videos = {'video':allvideo}
-    
     allarticle = Article.objects.filter(title = place_title)
-    index_articles = {'article':allarticle}
-    
     allhotel = Hotel.objects.filter(hotel_title = place_title)
-    index_hotels = {'hotels':allhotel}
+
+    return render(request,"allplaces.html",{'places':places,'video':allvideo,'article':allarticle,'hotels':allhotel})
     
-    return render(request,"allplaces.html",index_videos|index_articles|index_hotels|index_places)
     
-    
-@login_required(login_url="/login")
+
 def places(request):
-    allplace = Place.objects.all()
+    allplace = Place.objects.all().order_by('pk')
     paginator = Paginator(allplace,100)
     page_number = request.GET.get('page')
     try:
@@ -324,7 +317,7 @@ def places(request):
     return render(request,"places.html",index_places)
 
 
-@login_required(login_url="/login")
+
 def articles(request):
     allarticle = Article.objects.all()
     paginator = Paginator(allarticle,5)
@@ -340,21 +333,21 @@ def articles(request):
     return render(request,"articles.html",index_articles)
 
 
-@login_required(login_url="/login")
+
 def faq(request):
     return render(request,"faq.html")
 
 
-@login_required(login_url="/login")
+
 def support(request):
     return render(request,"support.html")
 
 
-@login_required(login_url="/login")
+
 def terms(request):
     return render(request,"terms.html")
 
 
-@login_required(login_url="/login")
+
 def privacy(request):
     return render(request,"privacy.html")
