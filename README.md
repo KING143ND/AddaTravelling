@@ -6,7 +6,7 @@ Welcome to AddaTravelling - your ultimate travel companion! AddaTravelling is a 
 
 ## Live Demo
 
-Explore the live demo of AddaTravelling: [AddaTravelling Live](http://addatravelling.work.gd/)
+Explore the live demo of AddaTravelling: [AddaTravelling Live](https://adda-travelling.vercel.app/)
 
 Feel free to check out the live project and start your journey to exciting destinations!
 
