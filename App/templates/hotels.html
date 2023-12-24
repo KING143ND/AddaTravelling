@@ -39,863 +39,210 @@
     <p class="video__description">Top stay options curated by Adda Travelling for your travel needs</p>
     <p class="section__title"><br>Top Beach Destinations</p>
     <div class="place__container container grid">
+        {% for i in beach %}
         <div class="hotel__card">
-            <img src="{{allhotel.0.image.url}}" alt="" class="hotel__img">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
             <div class="place__content">
                 <span class="hotel__rating">
-                    {{allhotel.0.rating}}
+                    {{i.rating}}
                 </span>
                 <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.0.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.0.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.0.price}}</span>
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
                 </div>
             </div>
-            <a href="{{allhotel.0.hotel_title}}">
+            <a href="{{i.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </a>
         </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.9.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.9.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.9.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.9.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.9.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.9.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.10.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.10.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.10.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.10.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.10.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.10.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.11.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.11.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.11.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.11.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.11.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.11.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.12.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.12.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.12.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.12.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.12.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.12.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.13.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.13.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.13.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.13.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.13.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.13.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.58.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.58.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.58.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.58.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.58.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.58.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.15.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.15.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.15.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.15.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.15.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.15.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <div class="hotel__card">
-            <img src="{{allhotel.3.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.3.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.3.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.3.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.3.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.3.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-
+        {% endfor %}
     </div>
 </section>
 <section class="discover section">
     <p class="section__title">Top Destinations for Honeymoon</p>
     <div class="place__container container grid">
-        <!--==================== HOTEL CARD 1 ====================-->
+        {% for i in lake %}        
+        {% if forloop.counter <= 4 %}
         <div class="hotel__card">
-            <img src="{{allhotel.17.image.url}}" alt="" class="hotel__img">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
             <div class="place__content">
                 <span class="hotel__rating">
-                    {{allhotel.17.rating}}
+                    {{i.rating}}
                 </span>
                 <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.17.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.17.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.17.price}}</span>
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
                 </div>
             </div>
-            <a href="{{allhotel.17.hotel_title}}">
+            <a href="{{i.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </a>
         </div>
-        <!--==================== HOTEL CARD 2 ====================-->
+        {% endif %}
+        {% endfor %}
+        {% for i in hill %}
+        {% if forloop.counter <= 7 %}
         <div class="hotel__card">
-            <img src="{{allhotel.1.image.url}}" alt="" class="hotel__img">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
             <div class="place__content">
                 <span class="hotel__rating">
-                    {{allhotel.1.rating}}
+                    {{i.rating}}
                 </span>
                 <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.1.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.1.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.1.price}}</span>
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
                 </div>
             </div>
-            <a href="{{allhotel.1.hotel_title}}">
+            <a href="{{i.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </a>
         </div>
-        <!--==================== HOTEL CARD 3 ====================-->
+        {% endif %}
+        {% endfor %}
+        {% for i in beach %}
+        {% if forloop.counter <= 7 %}
         <div class="hotel__card">
-            <img src="{{allhotel.2.image.url}}" alt="" class="hotel__img">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
             <div class="place__content">
                 <span class="hotel__rating">
-                    {{allhotel.2.rating}}
+                    {{i.rating}}
                 </span>
                 <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.2.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.2.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.2.price}}</span>
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
                 </div>
             </div>
-            <a href="{{allhotel.2.hotel_title}}">
+            <a href="{{i.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </a>
         </div>
-        <!--==================== HOTEL CARD 4 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.8.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.8.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.8.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.8.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.8.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.8.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 5 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.4.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.4.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.4.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.4.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.4.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.4.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 6 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.3.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.3.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.3.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.3.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.3.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.3.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 7 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.0.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.0.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.0.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.0.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.0.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.0.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 8 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.10.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.10.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.10.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.10.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.10.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.10.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 9 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.14.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.14.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.14.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.14.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.14.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.14.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 10 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.19.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.19.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.19.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.19.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.19.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.19.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 11 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.18.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.18.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.18.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.18.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.18.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.18.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== HOTEL CARD 12 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.9.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.9.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.9.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.9.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.9.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.9.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
+        {% endif %}
+        {% endfor %}
     </div>
 </section>
-<!--==================== HILL STATION HOTELS ====================-->
 <section class="discover section">
     <p class="section__title">Top Hill Stations</p>
     <div class="place__container container grid">
-        <!--==================== H B 1 ====================-->
+        {% for i in hill %}
         <div class="hotel__card">
-            <img src="{{allhotel.20.image.url}}" alt="" class="hotel__img">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
             <div class="place__content">
                 <span class="hotel__rating">
-                    {{allhotel.20.rating}}
+                    {{i.rating}}
                 </span>
                 <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.20.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.20.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.20.price}}</span>
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
                 </div>
             </div>
-            <a href="{{allhotel.20.hotel_title}}">
+            <a href="{{i.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </a>
         </div>
-        <!--==================== H B 2 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.17.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.17.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.17.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.17.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.17.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.17.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 3 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.30.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.30.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.30.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.30.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.30.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.30.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 4 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.2.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.2.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.2.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.2.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.2.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.2.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 5 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.36.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.36.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.36.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.36.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.36.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.36.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 6 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.8.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.8.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.8.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.8.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.8.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.8.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 7 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.4.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.4.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.4.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.4.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.4.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.4.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 8 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.31.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.31.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.31.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.31.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.31.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.31.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 9 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.28.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.28.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.28.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.28.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.28.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.28.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 10 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.29.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.29.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.29.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.29.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.29.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.29.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 11 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.1.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.1.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.1.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.1.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.1.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.1.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 12 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.14.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.14.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.14.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.14.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.14.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.14.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
+        {% endfor %}
     </div>
 </section>
-<!--==================== HISTORIC HOTELS ====================-->
 <section class="discover section">
-    <p class="section__title"><br>Top Historic Destinations</p>
+    <p class="section__title"><br>Top Historical Destinations</p>
     <div class="place__container container grid">
-        <!--==================== H B 1 ====================-->
+        {% for i in hist %}
         <div class="hotel__card">
-            <img src="{{allhotel.21.image.url}}" alt="" class="hotel__img">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
             <div class="place__content">
                 <span class="hotel__rating">
-                    {{allhotel.21.rating}}
+                    {{i.rating}}
                 </span>
                 <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.21.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.21.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.21.price}}</span>
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
                 </div>
             </div>
-            <a href="{{allhotel.21.hotel_title}}">
+            <a href="{{i.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
                 </button>
             </a>
         </div>
-        <!--==================== H B 2 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.24.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.24.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.24.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.24.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.24.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.24.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 3 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.7.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.7.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.7.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.7.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.7.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.7.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 4 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.25.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.25.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.25.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.25.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.25.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.25.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 5 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.22.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.22.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.22.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.22.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.22.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.22.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 6 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.26.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.26.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.26.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.26.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.26.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.26.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 7 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.33.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.33.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.33.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.33.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.33.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.33.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 8 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.51.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.51.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.51.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.51.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.51.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.51.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-        <!--==================== H B 9 ====================-->
-        <div class="hotel__card">
-            <img src="{{allhotel.47.image.url}}" alt="" class="hotel__img">
-            <div class="place__content">
-                <span class="hotel__rating">
-                    {{allhotel.47.rating}}
-                </span>
-                <div class="hotel__data">
-                    <h3 class="hotel__title">{{allhotel.47.hotel_title}}</h3>
-                    <h2 class="hotel__description">{{allhotel.47.discription}}</h2>
-                    <span class="hotel__description">{{allhotel.47.price}}</span>
-                </div>
-            </div>
-            <a href="{{allhotel.47.hotel_title}}">
-                <button class="button button--flex
-                hotel__button">
-                    <i class="ri-arrow-right-line"></i>
-                </button>
-            </a>
-        </div>
-
+        {% endfor %}
     </div>
 </section>
-<!--==================== TOP 60 HOTELS ====================-->
 <section class="discover section">
-    <p class="section__title">Collections of top 60 Places</p>
+    <p class="section__title"><br>Top Spiritual Destinations</p>
     <div class="place__container container grid">
-        <!--==================== HOTEL LOOP ====================-->
+        {% for i in spt %}
+        <div class="hotel__card">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
+            <div class="place__content">
+                <span class="hotel__rating">
+                    {{i.rating}}
+                </span>
+                <div class="hotel__data">
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
+                </div>
+            </div>
+            <a href="{{i.hotel_id}}">
+                <button class="button button--flex
+                hotel__button">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="discover section">
+    <p class="section__title"><br>Lakes & River</p>
+    <div class="place__container container grid">
+        {% for i in lake %}
+        <div class="hotel__card">
+            <img src="{{i.image.url}}" alt="" class="hotel__img">
+            <div class="place__content">
+                <span class="hotel__rating">
+                    {{i.rating}}
+                </span>
+                <div class="hotel__data">
+                    <h3 class="hotel__title">{{i.hotel_title}}</h3>
+                    <h2 class="hotel__description">{{i.discription}}</h2>
+                    <span class="hotel__description">{{i.price}}</span>
+                </div>
+            </div>
+            <a href="{{i.hotel_id}}">
+                <button class="button button--flex
+                hotel__button">
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="discover section">
+    <p class="section__title">Collections of top Trending Places</p>
+    <div class="place__container container grid">
         {% for item in allhotel %}
         <div class="hotel__card">
             <img src="{{item.image.url}}" alt="" class="hotel__img">
@@ -909,7 +256,7 @@
                     <span class="hotel__description">{{item.price}}</span>
                 </div>
             </div>
-            <a href="{{item.hotel_title}}">
+            <a href="{{item.hotel_id}}">
                 <button class="button button--flex
                 hotel__button">
                     <i class="ri-arrow-right-line"></i>
@@ -918,5 +265,4 @@
         </div>
         {% endfor %}
     </div>
-</section>
 {% endblock %}

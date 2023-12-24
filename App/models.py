@@ -1,7 +1,7 @@
 from django.db import models
-from sqlalchemy import null, true
+from django.utils.text import slugify
 
-# Create your models here.
+
 class Video(models.Model):
     v_id = models.IntegerField(default=0)
     title = models.CharField(max_length=100, default="")
@@ -11,16 +11,16 @@ class Video(models.Model):
     def __str__(self):
         return self.title
     
-
+    
 class Article(models.Model):
     a_id = models.IntegerField(default=0)
     title = models.CharField(max_length=100, default="")
     rating = models.CharField(max_length=100, default="")
     content = models.TextField(max_length=5000, default="")
-    image = models.ImageField()
+    image = models.ImageField() 
     
     def __str__(self):
-        return self.title
+        return self.title  
     
     
 class Hotel(models.Model):
@@ -54,7 +54,7 @@ class Hotel(models.Model):
     def __str__(self):
         return self.hotel_title
     
-    
+     
 class Place(models.Model):
     place_id = models.IntegerField(default=0)
     place_title = models.CharField(max_length=100, default="")
@@ -63,7 +63,7 @@ class Place(models.Model):
     rating = models.CharField(max_length=20, default="")
     image = models.ImageField()
     image_url = models.URLField(default="")
-    
+
     def __str__(self):
         return self.place_title
     
@@ -75,6 +75,6 @@ class Contact(models.Model):
     email= models.EmailField(max_length=100)
     massage= models.TextField()
     timeStamp=models.DateTimeField(auto_now_add=True, blank=True)
-
+    
     def __str__(self):
         return self.firstName

@@ -1,11 +1,11 @@
 # Create your views here.
 from django.contrib import messages, auth
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from . models import Article, Contact, Place, Video, Hotel
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-
+from django.utils.text import slugify
 
 def index(request):
     models = {
@@ -28,20 +28,16 @@ def index(request):
     return render(request, "index.html", context)
 
 
-
 def about(request):
     return render(request,"about.html")
-
 
 
 def features(request):
     return render(request,"features.html")
 
 
-
 def news(request):
     return render(request,"news.html")
-
 
 
 def contact(request):
@@ -92,7 +88,6 @@ def contact(request):
             messages.success(request, "Your Message has been Successfully sent!🙂")
             return redirect('/')      
     return render(request, "contact.html")
-
 
 
 def team(request):
@@ -203,7 +198,6 @@ def signup(request):
     return render(request, "signup.html")
 
 
-
 def search(request):
     query = request.GET['query']
     if len(query)==0:
@@ -220,36 +214,27 @@ def search(request):
     allvideo = Video.objects.filter(title__icontains = query)
     allarticle = Article.objects.filter(title__icontains = query)
     allhotel = Hotel.objects.filter(hotel_title__icontains = query)
-    
     search_results = {'search_place': search_place,'places':places,'video':allvideo,'article':allarticle,'hotels':allhotel}
     
     return render(request,"search.html", search_results)
 
 
-
-def search_places(request, place_title):
-    places = Place.objects.filter(place_title = place_title)
-    index_places = {'places':places}
+def search_places(request, place_id):
+    places = Place.objects.filter(place_id=place_id)
+    placeobj = get_object_or_404(Place, place_id=place_id)    
+    allvideo = Video.objects.filter(title = placeobj.place_title)
+    allarticle = Article.objects.filter(title = placeobj.place_title)    
+    allhotel = Hotel.objects.filter(hotel_title = placeobj.place_title)
+    context = {'hotels':allhotel,'places':places,'video':allvideo,'article':allarticle}
     
-    allvideo = Video.objects.filter(title = place_title)
-    index_videos = {'video':allvideo}
-    
-    allarticle = Article.objects.filter(title = place_title)
-    index_articles = {'article':allarticle}
-    
-    allhotel = Hotel.objects.filter(hotel_title = place_title)
-    index_hotels = {'hotels':allhotel}
-    
-    return render(request,"allplaces.html",index_videos|index_articles|index_hotels|index_places)
+    return render(request,"allplaces.html",context)
    
     
-
-def search_hotels(request, hotel_title):
-    hotels = Hotel.objects.filter(hotel_title = hotel_title)
+def search_hotels(request, hotel_id):
+    hotels = Hotel.objects.filter(hotel_id = hotel_id)
     index_hotels = {'hotels':hotels}
-    
+    print(hotels)
     return render(request,"allhotels.html",index_hotels)
-
 
 
 def tour(request):
@@ -267,9 +252,22 @@ def tour(request):
     return render(request,"tour.html",index_videos)
 
 
-
 def hotels(request):
-    allhotel = Hotel.objects.all()
+    allhotel = Hotel.objects.all().order_by("?")
+    categories={
+        'Beach':[],
+        'Hill Station':[],
+        'Spiritual Site':[],
+        'Historic Place':[],
+        'Lakes & Rivers':[],
+    }
+    for cat in allhotel:
+        categories[cat.discription].append(cat)
+    beach = categories['Beach']
+    hill = categories['Hill Station']
+    spt = categories['Spiritual Site']
+    hist = categories['Historic Place']
+    lake = categories['Lakes & Rivers']
     paginator = Paginator(allhotel,60)
     page_number = request.GET.get('page')
     try:
@@ -278,30 +276,34 @@ def hotels(request):
         allhotel = paginator.page(1)
     except EmptyPage:
         allhotel = paginator.page(paginator.num_pages)
-    index_hotels = {'allhotel':allhotel,'page':page_number}
+    index_hotels = {'allhotel':allhotel,'page':page_number,'beach':beach,'hill':hill,'spt':spt,'hist':hist,'lake':lake}
     
     return render(request,"hotels.html",index_hotels)
 
 
-def allhotels(request, hotel_title):
-    hotels = Hotel.objects.filter(hotel_title = hotel_title)
+def allhotels(request, hotel_id):
+    hotels = Hotel.objects.filter(hotel_id = hotel_id)
     allhotel = Hotel.objects.all()
     index_hotels = {'allhotel':allhotel,'hotels':hotels}
-    
+
     return render(request,"allhotels.html",index_hotels)
 
 
-
-def allplaces(request, place_title):
-    places = Place.objects.filter(place_title = place_title)    
-    allvideo = Video.objects.filter(title = place_title)
-    allarticle = Article.objects.filter(title = place_title)
-    allhotel = Hotel.objects.filter(hotel_title = place_title)
-
-    return render(request,"allplaces.html",{'places':places,'video':allvideo,'article':allarticle,'hotels':allhotel})
+def allplaces(request, place_id):
+    places = Place.objects.filter(place_id=place_id)
+    placeobj = get_object_or_404(Place, place_id=place_id)   
+    allvideo = Video.objects.filter(title = placeobj.place_title)
+    allarticle = Article.objects.filter(title = placeobj.place_title)
+    allhotel = Hotel.objects.filter(hotel_title = placeobj.place_title)
+    context = {
+        'places': places,
+        'video': allvideo,
+        'article': allarticle,
+        'hotels': allhotel,
+    }
+    return render(request,"allplaces.html",context)
     
     
-
 def places(request):
     allplace = Place.objects.all().order_by('pk')
     paginator = Paginator(allplace,100)
@@ -315,7 +317,6 @@ def places(request):
     index_places = {'allplace':allplace,'page':page_number}
     
     return render(request,"places.html",index_places)
-
 
 
 def articles(request):
@@ -333,20 +334,16 @@ def articles(request):
     return render(request,"articles.html",index_articles)
 
 
-
 def faq(request):
     return render(request,"faq.html")
-
 
 
 def support(request):
     return render(request,"support.html")
 
 
-
 def terms(request):
     return render(request,"terms.html")
-
 
 
 def privacy(request):

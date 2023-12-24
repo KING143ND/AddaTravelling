@@ -48,23 +48,13 @@
             {% for item in allvideo %}
             <div class="video__container container">
                 <div class="video__content">
-                    <iframe src="{{item.url}}">
-                        </iframe>
-                    <h1 class="video__title">{{item.title}}</h1>
-                    <h3 class="video__star">{{item.rating}}</h3>
-                </div>
-                <div class="video__content2">
-                    <iframe src="{{item.url}}">
-                        </iframe>
-                    <h1 class="video__title">{{item.title}}</h1>
-                    <h3 class="video__star">{{item.rating}}</h3>
-                </div>
-                <div class="video__content3">
-                    <iframe src="{{item.url}}">
-                        </iframe>
-                    <h1 class="video__title">{{item.title}}</h1>
-                    <h3 class="video__star">{{item.rating}}</h3>
-                </div>
+                    <video controls width="100%" height="100%">
+                        <source src="{{ item.url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h1 class="video__title">{{ item.title }}</h1>
+                    <h3 class="video__star">{{ item.rating }}</h3>
+                </div>                
             </div>
             {% endfor %}
         </div>

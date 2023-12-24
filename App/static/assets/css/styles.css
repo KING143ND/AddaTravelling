@@ -933,7 +933,8 @@ input {
 }
 
 .video__content {
-    display: initial;
+    display: block;
+    /* max-width: 80vw; */
     column-gap: 2rem;
     justify-content: center;
     align-items: center;

@@ -96,6 +96,7 @@ DATABASES = {
         'PASSWORD': '3fjMIKBCetw6',
         'HOST': 'ep-lucky-leaf-47786588-pooler.us-east-1.postgres.vercel-storage.com',  
         'PORT': '5432', 
+        'conn_max_age': 600,
     }
 }
 
@@ -141,6 +142,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Following settings only make sense on production and may break development environments.
 # if not DEBUG:
