@@ -94,12 +94,20 @@ DATABASES = {
     #========================== Postgresql databse ==========================
     'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'postgres',
-       'USER': 'postgres',
-       'PASSWORD': 'Ndnaveen@143',
-       'HOST': 'db.bhltgggwptthswljufgv.supabase.co',
-       'PORT': '5432',
+       'NAME': 'defaultdb',
+       'USER': 'avnadmin',
+       'PASSWORD': 'AVNS_7EcL8RkvPgsiYCDSq1O',
+       'HOST': 'addatravelling-addatravellingdb.a.aivencloud.com',
+       'PORT': '24132',
     }
+    # 'default': {
+    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #    'NAME': 'postgres',
+    #    'USER': 'postgres',
+    #    'PASSWORD': 'Ndnaveen@143',
+    #    'HOST': 'db.bhltgggwptthswljufgv.supabase.co',
+    #    'PORT': '5432',
+    # }
 }
 
 
